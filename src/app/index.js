@@ -6,7 +6,7 @@ import MyDomain from './containers/my-domain';
 import style from './style.less';
 const MyApp = (props) => {
   return (
-    <div className={`my-app ${style['module-style']}`}>
+    <div className={`app ${style['module-style']}`}>
       <div>My App</div>
       <pre><code>{JSON.stringify(props, null, 4)}</code></pre>
       <div className="layout">

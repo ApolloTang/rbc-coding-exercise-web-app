@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
 
-import myDomain from  'my-App/containers/my-domain/reducer';
+import myDomain from  'app/containers/my-domain/reducer';
 
 const rootReducer = combineReducers({
   myDomain

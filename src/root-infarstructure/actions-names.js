@@ -1,4 +1,4 @@
-import myDomain from 'my-app/containers/my-domain/actions-names';
+import myDomain from 'app/containers/my-domain/actions-names';
 
 const symbols = [
   ...myDomain,
