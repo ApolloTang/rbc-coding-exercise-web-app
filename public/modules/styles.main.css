@@ -2097,6 +2097,13 @@
 /* ++++ style-file: root-infarstructure/style.less [end] */
 /* ++++ style-file: src/root-app/styles.less [start] */
 #root-app.theme-a {
+  /* RESET RESET RESET RESET */
+  /* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+  /* HTML5 display-role reset for older browsers */
+  /* end RESET RESET RESET RESET */
   /* ++++ style-file: common/styles/index.less [start] */
   /* Importing material design color [begin]*/
   /* Importing material design color [completed] */
@@ -2116,50 +2123,11 @@
   /* ++++ style-file: root-app/styles/app-style-init/_app-typography.less [end]*/
   /* ++++ style-file: root-app/styles/app-style-init/_app-misc.less [start]*/
   /* ++++ style-file: root-app/styles/app-style-init/_app-misc.less [end]*/
-  /* RESET RESET RESET RESET */
-  /* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-  /* HTML5 display-role reset for older browsers */
-  /* end RESET RESET RESET RESET */
   *zoom: 1;
   background-color: #f7f7f7;
   color: rgba(0, 0, 0, 0.54);
   font-family: RobotoLight;
   outline: solid blue 3px;
-}
-#root-app.theme-a .mixin-tileContent {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  right: 0px;
-}
-#root-app.theme-a input::-webkit-input-placeholder {
-  /* WebKit, Blink, Edge */
-  color: rgba(0, 0, 0, 0.38);
-}
-input#root-app.theme-a::-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: rgba(0, 0, 0, 0.38);
-  opacity: 1;
-}
-input#root-app.theme-a::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: rgba(0, 0, 0, 0.38);
-  opacity: 1;
-}
-input#root-app.theme-a:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: rgba(0, 0, 0, 0.38);
-}
-input#root-app.theme-a::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: rgba(0, 0, 0, 0.38);
-}
-#root-app.theme-a input {
-  color: rgba(0, 0, 0, 0.54);
 }
 #root-app.theme-a html,
 #root-app.theme-a body,
@@ -2282,6 +2250,38 @@ input#root-app.theme-a::-ms-input-placeholder {
   border-collapse: collapse;
   border-spacing: 0;
 }
+#root-app.theme-a .mixin-tileContent {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+}
+#root-app.theme-a input::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: rgba(0, 0, 0, 0.38);
+}
+input#root-app.theme-a::-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: rgba(0, 0, 0, 0.38);
+  opacity: 1;
+}
+input#root-app.theme-a::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: rgba(0, 0, 0, 0.38);
+  opacity: 1;
+}
+input#root-app.theme-a:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba(0, 0, 0, 0.38);
+}
+input#root-app.theme-a::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgba(0, 0, 0, 0.38);
+}
+#root-app.theme-a input {
+  color: rgba(0, 0, 0, 0.54);
+}
 #root-app.theme-a:before,
 #root-app.theme-a:after {
   content: " ";
@@ -2398,97 +2398,167 @@ input#root-app.theme-a::-ms-input-placeholder {
 }
 /* ++++ style-file: modules/layout-demo/style.less [end] */
 /* ++++ style-file: modules/grid-demo/style.less [start] */
-/* ++++ style-file: common/styles/index.less [start] */
-/* Importing material design color [begin]*/
-/* Importing material design color [completed] */
-/* Importing style helpers [begin]*/
-/* Responsive Breakpoints */
-.mixin-tileContent {
+#root-app.theme-a {
+  /* ++++ style-file: common/styles/index.less [start] */
+  /* Importing material design color [begin]*/
+  /* Importing material design color [completed] */
+  /* Importing style helpers [begin]*/
+  /* Responsive Breakpoints */
+  /* Importing style helpers [complete]*/
+  /* Importing style widgets [begin]*/
+  /* ++++ style-file: widget/_circle-button.less [start] */
+  /* ++++ style-file: widget/_circle-button.less [end] */
+  /* Importing style widgets [complete]*/
+  /* ++++ style-file: common/styles/index.less [end] */
+  /* ++++ style-file: root-app/styles/app-style-init/_app-variables.less [start]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-variables.less [end]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-colors.less [start]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-colors.less [end]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-typography.less [start]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-typography.less [end]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-misc.less [start]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-misc.less [end]*/
+}
+#root-app.theme-a .mixin-tileContent {
   position: absolute;
   top: 0px;
   left: 0px;
   bottom: 0px;
   right: 0px;
 }
-/* Importing style helpers [complete]*/
-/* Importing style widgets [begin]*/
-/* ++++ style-file: widget/_circle-button.less [start] */
-/* ++++ style-file: widget/_circle-button.less [end] */
-/* Importing style widgets [complete]*/
-/* ++++ style-file: common/styles/index.less [end] */
-._3QFDzNpGVWPp1Z99qSVpXc .row + .row {
+#root-app.theme-a input::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: rgba(0, 0, 0, 0.38);
+}
+input#root-app.theme-a::-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: rgba(0, 0, 0, 0.38);
+  opacity: 1;
+}
+input#root-app.theme-a::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: rgba(0, 0, 0, 0.38);
+  opacity: 1;
+}
+input#root-app.theme-a:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba(0, 0, 0, 0.38);
+}
+input#root-app.theme-a::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgba(0, 0, 0, 0.38);
+}
+#root-app.theme-a input {
+  color: rgba(0, 0, 0, 0.54);
+}
+#root-app.theme-a ._3QFDzNpGVWPp1Z99qSVpXc .row + .row {
   margin-top: 10px;
 }
-._3QFDzNpGVWPp1Z99qSVpXc .cell {
+#root-app.theme-a ._3QFDzNpGVWPp1Z99qSVpXc .cell {
   height: 40px;
   background: #d6f5f5;
 }
-._3QFDzNpGVWPp1Z99qSVpXc .grid-1 {
+#root-app.theme-a ._3QFDzNpGVWPp1Z99qSVpXc .grid-1 {
   width: calc((100% - 110px) * 0.08333333333333333 + 0px);
   display: inline-block;
   vertical-align: top;
   margin-right: 10px;
 }
-._3QFDzNpGVWPp1Z99qSVpXc .grid-1:last-child {
+#root-app.theme-a ._3QFDzNpGVWPp1Z99qSVpXc .grid-1:last-child {
   margin-right: 0;
 }
-._3QFDzNpGVWPp1Z99qSVpXc .grid-2 {
+#root-app.theme-a ._3QFDzNpGVWPp1Z99qSVpXc .grid-2 {
   width: calc((100% - 110px) * 0.16666666666666666 + 10px);
   display: inline-block;
   vertical-align: top;
   margin-right: 10px;
 }
-._3QFDzNpGVWPp1Z99qSVpXc .grid-2:last-child {
+#root-app.theme-a ._3QFDzNpGVWPp1Z99qSVpXc .grid-2:last-child {
   margin-right: 0;
 }
-._3QFDzNpGVWPp1Z99qSVpXc .grid-3 {
+#root-app.theme-a ._3QFDzNpGVWPp1Z99qSVpXc .grid-3 {
   width: calc((100% - 110px) * 0.25 + 20px);
   display: inline-block;
   vertical-align: top;
   margin-right: 10px;
 }
-._3QFDzNpGVWPp1Z99qSVpXc .grid-3:last-child {
+#root-app.theme-a ._3QFDzNpGVWPp1Z99qSVpXc .grid-3:last-child {
   margin-right: 0;
 }
-._3QFDzNpGVWPp1Z99qSVpXc .grid-4 {
+#root-app.theme-a ._3QFDzNpGVWPp1Z99qSVpXc .grid-4 {
   width: calc((100% - 110px) * 0.3333333333333333 + 30px);
   display: inline-block;
   vertical-align: top;
   margin-right: 10px;
 }
-._3QFDzNpGVWPp1Z99qSVpXc .grid-4:last-child {
+#root-app.theme-a ._3QFDzNpGVWPp1Z99qSVpXc .grid-4:last-child {
   margin-right: 0;
 }
-._3QFDzNpGVWPp1Z99qSVpXc .grid-6 {
+#root-app.theme-a ._3QFDzNpGVWPp1Z99qSVpXc .grid-6 {
   width: calc((100% - 110px) * 0.5 + 50px);
   display: inline-block;
   vertical-align: top;
   margin-right: 10px;
 }
-._3QFDzNpGVWPp1Z99qSVpXc .grid-6:last-child {
+#root-app.theme-a ._3QFDzNpGVWPp1Z99qSVpXc .grid-6:last-child {
   margin-right: 0;
 }
 /* ++++ style-file: modules/grid-demo/style.less [end] */
 /* ++++ style-file: modules/elevation-test/style.less [start] */
-/* ++++ style-file: common/styles/index.less [start] */
-/* Importing material design color [begin]*/
-/* Importing material design color [completed] */
-/* Importing style helpers [begin]*/
-/* Responsive Breakpoints */
-.mixin-tileContent {
+#root-app.theme-a {
+  /* ++++ style-file: common/styles/index.less [start] */
+  /* Importing material design color [begin]*/
+  /* Importing material design color [completed] */
+  /* Importing style helpers [begin]*/
+  /* Responsive Breakpoints */
+  /* Importing style helpers [complete]*/
+  /* Importing style widgets [begin]*/
+  /* ++++ style-file: widget/_circle-button.less [start] */
+  /* ++++ style-file: widget/_circle-button.less [end] */
+  /* Importing style widgets [complete]*/
+  /* ++++ style-file: common/styles/index.less [end] */
+  /* ++++ style-file: root-app/styles/app-style-init/_app-variables.less [start]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-variables.less [end]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-colors.less [start]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-colors.less [end]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-typography.less [start]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-typography.less [end]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-misc.less [start]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-misc.less [end]*/
+}
+#root-app.theme-a .mixin-tileContent {
   position: absolute;
   top: 0px;
   left: 0px;
   bottom: 0px;
   right: 0px;
 }
-/* Importing style helpers [complete]*/
-/* Importing style widgets [begin]*/
-/* ++++ style-file: widget/_circle-button.less [start] */
-/* ++++ style-file: widget/_circle-button.less [end] */
-/* Importing style widgets [complete]*/
-/* ++++ style-file: common/styles/index.less [end] */
-._15w9rkpr_8Euvk9-_-KThd .cell {
+#root-app.theme-a input::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: rgba(0, 0, 0, 0.38);
+}
+input#root-app.theme-a::-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: rgba(0, 0, 0, 0.38);
+  opacity: 1;
+}
+input#root-app.theme-a::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: rgba(0, 0, 0, 0.38);
+  opacity: 1;
+}
+input#root-app.theme-a:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba(0, 0, 0, 0.38);
+}
+input#root-app.theme-a::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgba(0, 0, 0, 0.38);
+}
+#root-app.theme-a input {
+  color: rgba(0, 0, 0, 0.54);
+}
+#root-app.theme-a ._15w9rkpr_8Euvk9-_-KThd .cell {
   box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 24px 38px 3px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.4);
   float: left;
   width: 100px;
@@ -2496,25 +2566,25 @@ input#root-app.theme-a::-ms-input-placeholder {
   margin: 10px;
   padding: 10px;
 }
-._15w9rkpr_8Euvk9-_-KThd .elev-2 {
+#root-app.theme-a ._15w9rkpr_8Euvk9-_-KThd .elev-2 {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
-._15w9rkpr_8Euvk9-_-KThd .elev-3 {
+#root-app.theme-a ._15w9rkpr_8Euvk9-_-KThd .elev-3 {
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12), 0 3px 3px -2px rgba(0, 0, 0, 0.4);
 }
-._15w9rkpr_8Euvk9-_-KThd .elev-4 {
+#root-app.theme-a ._15w9rkpr_8Euvk9-_-KThd .elev-4 {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
 }
-._15w9rkpr_8Euvk9-_-KThd .elev-6 {
+#root-app.theme-a ._15w9rkpr_8Euvk9-_-KThd .elev-6 {
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.4);
 }
-._15w9rkpr_8Euvk9-_-KThd .elev-8 {
+#root-app.theme-a ._15w9rkpr_8Euvk9-_-KThd .elev-8 {
   box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.4);
 }
-._15w9rkpr_8Euvk9-_-KThd .elev-16 {
+#root-app.theme-a ._15w9rkpr_8Euvk9-_-KThd .elev-16 {
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.4);
 }
-._15w9rkpr_8Euvk9-_-KThd .elev-24 {
+#root-app.theme-a ._15w9rkpr_8Euvk9-_-KThd .elev-24 {
   box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 24px 38px 3px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.4);
 }
 /* ++++ style-file: modules/elevation-test/style.less [end] */
@@ -2663,29 +2733,64 @@ input#root-app.theme-b::-ms-input-placeholder {
 }
 /* ++++ style-file: modules/typography-test/style.less [end] */
 /* ++++ style-file: modules/tiles-demo/style.less [start] */
-/* ++++ style-file: common/styles/index.less [start] */
-/* Importing material design color [begin]*/
-/* Importing material design color [completed] */
-/* Importing style helpers [begin]*/
-/* Responsive Breakpoints */
-.mixin-tileContent {
+#root-app.theme-a {
+  /* ++++ style-file: common/styles/index.less [start] */
+  /* Importing material design color [begin]*/
+  /* Importing material design color [completed] */
+  /* Importing style helpers [begin]*/
+  /* Responsive Breakpoints */
+  /* Importing style helpers [complete]*/
+  /* Importing style widgets [begin]*/
+  /* ++++ style-file: widget/_circle-button.less [start] */
+  /* ++++ style-file: widget/_circle-button.less [end] */
+  /* Importing style widgets [complete]*/
+  /* ++++ style-file: common/styles/index.less [end] */
+  /* ++++ style-file: root-app/styles/app-style-init/_app-variables.less [start]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-variables.less [end]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-colors.less [start]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-colors.less [end]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-typography.less [start]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-typography.less [end]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-misc.less [start]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-misc.less [end]*/
+}
+#root-app.theme-a .mixin-tileContent {
   position: absolute;
   top: 0px;
   left: 0px;
   bottom: 0px;
   right: 0px;
 }
-/* Importing style helpers [complete]*/
-/* Importing style widgets [begin]*/
-/* ++++ style-file: widget/_circle-button.less [start] */
-/* ++++ style-file: widget/_circle-button.less [end] */
-/* Importing style widgets [complete]*/
-/* ++++ style-file: common/styles/index.less [end] */
-.j8BzLJgGhOIcILTlSch0y .tiles {
+#root-app.theme-a input::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: rgba(0, 0, 0, 0.38);
+}
+input#root-app.theme-a::-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: rgba(0, 0, 0, 0.38);
+  opacity: 1;
+}
+input#root-app.theme-a::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: rgba(0, 0, 0, 0.38);
+  opacity: 1;
+}
+input#root-app.theme-a:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba(0, 0, 0, 0.38);
+}
+input#root-app.theme-a::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgba(0, 0, 0, 0.38);
+}
+#root-app.theme-a input {
+  color: rgba(0, 0, 0, 0.54);
+}
+#root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tiles {
   outline: 1px solid red;
 }
 @media (max-width: 767px) {
-  .j8BzLJgGhOIcILTlSch0y .tile {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile {
     width: calc((100% - 110px) * 1 + 110px);
     padding-top: calc( ((100% - 110px) * 1 + 110px) * 0.25 );
     margin-right: 10px;
@@ -2694,307 +2799,307 @@ input#root-app.theme-b::-ms-input-placeholder {
     display: inline-block;
     vertical-align: top;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(100) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(100) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(99) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(99) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(98) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(98) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(97) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(97) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(96) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(96) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(95) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(95) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(94) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(94) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(93) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(93) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(92) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(92) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(91) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(91) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(90) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(90) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(89) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(89) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(88) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(88) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(87) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(87) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(86) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(86) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(85) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(85) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(84) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(84) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(83) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(83) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(82) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(82) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(81) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(81) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(80) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(80) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(79) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(79) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(78) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(78) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(77) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(77) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(76) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(76) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(75) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(75) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(74) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(74) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(73) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(73) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(72) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(72) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(71) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(71) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(70) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(70) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(69) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(69) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(68) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(68) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(67) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(67) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(66) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(66) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(65) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(65) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(64) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(64) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(63) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(63) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(62) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(62) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(61) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(61) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(60) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(60) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(59) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(59) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(58) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(58) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(57) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(57) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(56) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(56) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(55) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(55) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(54) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(54) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(53) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(53) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(52) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(52) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(51) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(51) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(50) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(50) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(49) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(49) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(48) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(48) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(47) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(47) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(46) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(46) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(45) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(45) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(44) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(44) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(43) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(43) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(42) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(42) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(41) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(41) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(40) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(40) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(39) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(39) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(38) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(38) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(37) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(37) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(36) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(36) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(35) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(35) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(34) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(34) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(33) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(33) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(32) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(32) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(31) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(31) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(30) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(30) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(29) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(29) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(28) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(28) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(27) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(27) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(26) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(26) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(25) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(25) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(24) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(24) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(23) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(23) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(22) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(22) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(21) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(21) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(20) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(20) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(19) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(19) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(18) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(18) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(17) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(17) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(16) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(16) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(15) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(15) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(14) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(14) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(13) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(13) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(12) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(12) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(11) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(11) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(10) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(10) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(9) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(9) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(8) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(8) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(7) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(7) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(6) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(6) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(5) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(5) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(4) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(4) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(3) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(3) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(2) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(2) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(1) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(1) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tileContent {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tileContent {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -3003,7 +3108,7 @@ input#root-app.theme-b::-ms-input-placeholder {
   }
 }
 @media (min-width: 768px) and (max-width: 1200px) {
-  .j8BzLJgGhOIcILTlSch0y .tile {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile {
     width: calc((100% - 110px) * 0.3333333333333333 + 30px);
     padding-top: calc( ((100% - 110px) * 0.3333333333333333 + 30px) * 0.5 );
     margin-right: 10px;
@@ -3012,307 +3117,307 @@ input#root-app.theme-b::-ms-input-placeholder {
     display: inline-block;
     vertical-align: top;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(300) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(300) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(297) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(297) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(294) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(294) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(291) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(291) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(288) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(288) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(285) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(285) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(282) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(282) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(279) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(279) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(276) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(276) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(273) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(273) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(270) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(270) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(267) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(267) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(264) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(264) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(261) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(261) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(258) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(258) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(255) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(255) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(252) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(252) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(249) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(249) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(246) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(246) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(243) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(243) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(240) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(240) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(237) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(237) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(234) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(234) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(231) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(231) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(228) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(228) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(225) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(225) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(222) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(222) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(219) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(219) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(216) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(216) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(213) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(213) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(210) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(210) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(207) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(207) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(204) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(204) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(201) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(201) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(198) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(198) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(195) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(195) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(192) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(192) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(189) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(189) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(186) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(186) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(183) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(183) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(180) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(180) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(177) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(177) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(174) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(174) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(171) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(171) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(168) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(168) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(165) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(165) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(162) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(162) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(159) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(159) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(156) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(156) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(153) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(153) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(150) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(150) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(147) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(147) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(144) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(144) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(141) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(141) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(138) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(138) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(135) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(135) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(132) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(132) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(129) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(129) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(126) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(126) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(123) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(123) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(120) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(120) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(117) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(117) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(114) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(114) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(111) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(111) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(108) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(108) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(105) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(105) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(102) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(102) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(99) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(99) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(96) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(96) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(93) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(93) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(90) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(90) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(87) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(87) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(84) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(84) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(81) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(81) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(78) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(78) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(75) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(75) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(72) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(72) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(69) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(69) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(66) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(66) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(63) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(63) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(60) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(60) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(57) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(57) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(54) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(54) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(51) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(51) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(48) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(48) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(45) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(45) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(42) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(42) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(39) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(39) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(36) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(36) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(33) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(33) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(30) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(30) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(27) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(27) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(24) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(24) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(21) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(21) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(18) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(18) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(15) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(15) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(12) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(12) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(9) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(9) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(6) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(6) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(3) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(3) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tileContent {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tileContent {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -3321,7 +3426,7 @@ input#root-app.theme-b::-ms-input-placeholder {
   }
 }
 @media (min-width: 1201px) {
-  .j8BzLJgGhOIcILTlSch0y .tile {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile {
     width: calc((100% - 110px) * 0.25 + 20px);
     padding-top: calc( ((100% - 110px) * 0.25 + 20px) * 1 );
     margin-right: 10px;
@@ -3330,307 +3435,307 @@ input#root-app.theme-b::-ms-input-placeholder {
     display: inline-block;
     vertical-align: top;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(400) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(400) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(396) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(396) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(392) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(392) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(388) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(388) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(384) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(384) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(380) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(380) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(376) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(376) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(372) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(372) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(368) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(368) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(364) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(364) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(360) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(360) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(356) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(356) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(352) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(352) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(348) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(348) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(344) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(344) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(340) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(340) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(336) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(336) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(332) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(332) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(328) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(328) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(324) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(324) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(320) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(320) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(316) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(316) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(312) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(312) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(308) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(308) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(304) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(304) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(300) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(300) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(296) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(296) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(292) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(292) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(288) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(288) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(284) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(284) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(280) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(280) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(276) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(276) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(272) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(272) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(268) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(268) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(264) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(264) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(260) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(260) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(256) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(256) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(252) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(252) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(248) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(248) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(244) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(244) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(240) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(240) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(236) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(236) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(232) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(232) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(228) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(228) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(224) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(224) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(220) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(220) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(216) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(216) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(212) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(212) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(208) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(208) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(204) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(204) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(200) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(200) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(196) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(196) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(192) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(192) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(188) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(188) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(184) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(184) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(180) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(180) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(176) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(176) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(172) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(172) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(168) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(168) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(164) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(164) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(160) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(160) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(156) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(156) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(152) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(152) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(148) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(148) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(144) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(144) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(140) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(140) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(136) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(136) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(132) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(132) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(128) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(128) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(124) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(124) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(120) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(120) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(116) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(116) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(112) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(112) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(108) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(108) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(104) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(104) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(100) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(100) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(96) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(96) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(92) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(92) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(88) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(88) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(84) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(84) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(80) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(80) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(76) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(76) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(72) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(72) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(68) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(68) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(64) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(64) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(60) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(60) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(56) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(56) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(52) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(52) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(48) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(48) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(44) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(44) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(40) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(40) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(36) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(36) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(32) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(32) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(28) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(28) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(24) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(24) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(20) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(20) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(16) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(16) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(12) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(12) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(8) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(8) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tile:nth-child(4) {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tile:nth-child(4) {
     margin-right: 0px;
   }
-  .j8BzLJgGhOIcILTlSch0y .tileContent {
+  #root-app.theme-a .j8BzLJgGhOIcILTlSch0y .tileContent {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -3640,40 +3745,75 @@ input#root-app.theme-b::-ms-input-placeholder {
 }
 /* ++++ style-file: modules/tiles-demo/style.less [end] */
 /* ++++ style-file: modules/font-test/style.less [start] */
-/* ++++ style-file: common/styles/index.less [start] */
-/* Importing material design color [begin]*/
-/* Importing material design color [completed] */
-/* Importing style helpers [begin]*/
-/* Responsive Breakpoints */
-.mixin-tileContent {
+#root-app.theme-a {
+  /* ++++ style-file: common/styles/index.less [start] */
+  /* Importing material design color [begin]*/
+  /* Importing material design color [completed] */
+  /* Importing style helpers [begin]*/
+  /* Responsive Breakpoints */
+  /* Importing style helpers [complete]*/
+  /* Importing style widgets [begin]*/
+  /* ++++ style-file: widget/_circle-button.less [start] */
+  /* ++++ style-file: widget/_circle-button.less [end] */
+  /* Importing style widgets [complete]*/
+  /* ++++ style-file: common/styles/index.less [end] */
+  /* ++++ style-file: root-app/styles/app-style-init/_app-variables.less [start]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-variables.less [end]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-colors.less [start]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-colors.less [end]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-typography.less [start]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-typography.less [end]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-misc.less [start]*/
+  /* ++++ style-file: root-app/styles/app-style-init/_app-misc.less [end]*/
+}
+#root-app.theme-a .mixin-tileContent {
   position: absolute;
   top: 0px;
   left: 0px;
   bottom: 0px;
   right: 0px;
 }
-/* Importing style helpers [complete]*/
-/* Importing style widgets [begin]*/
-/* ++++ style-file: widget/_circle-button.less [start] */
-/* ++++ style-file: widget/_circle-button.less [end] */
-/* Importing style widgets [complete]*/
-/* ++++ style-file: common/styles/index.less [end] */
-._3goRasnpKB4QzukdG6lSFS .thin {
+#root-app.theme-a input::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: rgba(0, 0, 0, 0.38);
+}
+input#root-app.theme-a::-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: rgba(0, 0, 0, 0.38);
+  opacity: 1;
+}
+input#root-app.theme-a::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: rgba(0, 0, 0, 0.38);
+  opacity: 1;
+}
+input#root-app.theme-a:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba(0, 0, 0, 0.38);
+}
+input#root-app.theme-a::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgba(0, 0, 0, 0.38);
+}
+#root-app.theme-a input {
+  color: rgba(0, 0, 0, 0.54);
+}
+#root-app.theme-a ._3goRasnpKB4QzukdG6lSFS .thin {
   font-family: 'RobotoThin';
 }
-._3goRasnpKB4QzukdG6lSFS .light {
+#root-app.theme-a ._3goRasnpKB4QzukdG6lSFS .light {
   font-family: 'RobotoLight';
 }
-._3goRasnpKB4QzukdG6lSFS .regular {
+#root-app.theme-a ._3goRasnpKB4QzukdG6lSFS .regular {
   font-family: 'RobotoRegular';
 }
-._3goRasnpKB4QzukdG6lSFS .medium {
+#root-app.theme-a ._3goRasnpKB4QzukdG6lSFS .medium {
   font-family: 'RobotoMedium';
 }
-._3goRasnpKB4QzukdG6lSFS .bold {
+#root-app.theme-a ._3goRasnpKB4QzukdG6lSFS .bold {
   font-family: 'RobotoBold';
 }
-._3goRasnpKB4QzukdG6lSFS .black {
+#root-app.theme-a ._3goRasnpKB4QzukdG6lSFS .black {
   font-family: 'RobotoBlack';
 }
 /* ++++ style-file: modules/font-test/style.less [end] */
