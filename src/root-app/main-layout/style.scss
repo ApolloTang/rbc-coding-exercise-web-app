@@ -1,0 +1,27 @@
+/* ++++ style-file src/root-app/main-layout.less [start] */
+
+#root-app.theme-a {
+  :local(.module-style) {
+    $height-total: 300px;
+    $height-head: 50px;
+    $height-foot: 50px;
+
+    .head, .body, .foot {
+      width : 100%;
+      outline: yellow 1px solid;
+    }
+
+    .head {
+    }
+
+    .body {
+      height: calc( 100% - #{$height-head} - #{$height-foot} );
+    }
+
+    .foot {
+    }
+  }
+
+}
+
+/* ++++ style-file src/root-app/main-layout.less [end] */

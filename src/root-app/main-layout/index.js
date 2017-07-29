@@ -1,11 +1,12 @@
 import React from 'react';
 
-import style from './style.less';
+import style from './style.scss';
 
-const Layout = ({Navigation, Routes}) => (
+const Layout = ({header, body, foot}) => (
   <div className={`main-layout ${style['module-style']}`}>
-    <div className="menu">{Navigation}</div>
-    <div className="workspace">{Routes}</div>
+    <div className="head">{header}</div>
+    <div className="body">{body}</div>
+    <div className="foot">{foot}</div>
   </div>
 );
 
