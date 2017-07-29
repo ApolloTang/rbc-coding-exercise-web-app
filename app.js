@@ -23,16 +23,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-// console.log(path.join(__dirname, 'sass'));
-// console.log(path.join(__dirname, 'stylesheets'));
-//
-// app.use(sassMiddleware({
-//   src: path.join(__dirname, 'sass', ),
-//   dest: path.join(__dirname, 'stylesheets'),
-//   indentedSyntax: true, // true = .sass and false = .scss
-//   sourceMap: true
-// }));
-
 app.use(sassMiddleware({
   src: path.join(__dirname, 'public'),
   dest: path.join(__dirname, 'public'),
@@ -41,7 +31,7 @@ app.use(sassMiddleware({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
+app.use('/*', index);
 app.use('/users', users);
 
 // catch 404 and forward to error handler
