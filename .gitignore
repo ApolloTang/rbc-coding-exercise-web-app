@@ -30,4 +30,7 @@ node_modules
 npm-debug.log
 
 public/modules
+public/modules-fonts
+public/modules-imgs
+
 

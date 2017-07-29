@@ -71,18 +71,18 @@ const config_fn = env => {
         [
           {
             test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$/,
-            loader: 'file-loader?name=./imgs/[name].[ext]',
+            loader: 'file-loader?&name=../modules-imgs/[name].[ext]',
             exclude: absolutePath_fonts
           },
           {
             test: /\.(woff|woff2|ttf|eot|svg|otf)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
-            loader: 'file-loader?&name=../fonts/[name].[ext]'
+            loader: 'file-loader?&name=../modules-fonts/[name].[ext]'
           },
           {
             test: /\.(less|css)$/,
             use: ExtractTextPlugin.extract({
               fallback: 'style-loader',
-              use: 'css-loader!less-loader'
+              use: 'css-loader!resolve-url-loader!less-loader'
             }),
             include: absolutePath_sourceFolder
           },
@@ -90,7 +90,7 @@ const config_fn = env => {
             test: /\.(sass|scss)$/,
             use: ExtractTextPlugin.extract({
               fallback: 'style-loader',
-              use: 'css-loader!sass-loader'
+              use: 'css-loader!resolve-url-loader!sass-loader'
             }),
             include: absolutePath_sourceFolder
           },
