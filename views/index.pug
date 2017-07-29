@@ -1,11 +1,14 @@
 html
   head
-    link(rel='stylesheet', href='/modules/style.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/modules/styles.main.css')
 
   body
-    img( src="images/background.jpg")
+    // img( src="images/background.jpg")
     p
       span Welcome to #{title}
+    div(id="root-container")
     script(src='/javascripts/host.js')
-    script(src='/modules/app.js')
+    script(src='/modules/bundle.common.js')
+    script(src='/modules/bundle.vendor.js')
+    script(src='/modules/bundle.main.js')

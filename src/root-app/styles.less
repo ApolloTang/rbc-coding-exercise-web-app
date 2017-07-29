@@ -1,0 +1,38 @@
+/* ++++ style-file: src/root-app/styles.less [start] */
+
+
+#root-app.theme-a {
+  @import "~common/styles/index.less";
+  @import "./styles/app-styles-theme-a/init/index.less";
+ /* RESET RESET RESET RESET */
+  @import "./styles/reset.less";
+ /* end RESET RESET RESET RESET */
+
+  .mixin-clearfix();
+  background-color: @global-background-color;
+  color: @global-text-color;
+  font-family: @global-default-font;
+  outline: solid blue 3px;
+  .grids-demo {
+    background:yellow;
+  }
+
+}
+
+
+// #root-app.theme-b {
+//   @import "~common/styles/index.less";
+//   @import "./styles/app-styles-theme-b/init/index.less";
+//   // @import "./styles/reset.css";
+//
+//   .mixin-clearfix();
+//   background-color: @global-background-color;
+//   color: @global-text-color;
+//   font-family: @global-default-font;
+//   outline: solid blue 3px;
+//   .grids-demo {
+//     background:red;
+//   }
+//
+// }
+/* ++++ style-file: src/root-app/styles.less [end] */
