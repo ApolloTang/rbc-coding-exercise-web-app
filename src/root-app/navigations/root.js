@@ -1,5 +1,9 @@
+import _ from 'lodash';
+
 import React from 'react';
-import {Route, Switch, Link, Redirect } from 'react-router-dom';
+import { Route, Switch, Link, Redirect } from 'react-router-dom';
+
+// import appConfig from 'root/appConfig';
 
 import FontTest   from 'modules/font-test';
 import Tiles      from 'modules/tiles-demo';
@@ -8,6 +12,7 @@ import Elevations from 'modules/elevation-test';
 import GridDemo   from 'modules/grids-demo';
 import LayoutDemo from 'modules/layout-demo';
 import SimpleNavigationDemo from 'modules/simple-navigation-demo';
+
 
 const navigationDirective = [
   {to:'/font-test',               displayText:'fonts'},
@@ -19,7 +24,15 @@ const navigationDirective = [
   {to:'/simple-navigation-demo',  displayText:'Simple Navigation'},
 ];
 
-const Routes = () => (
+const Test = ({match}) => (
+  <div>
+    <pre><code>{JSON.stringify(_.get(match, 'params', {} ), null, 4)}</code></pre>
+  </div>
+)
+
+
+
+const AuthRoutes = () => (
   <Switch>
     <Route exact path="/"                       component={()=>(<div>home</div>)} />
     <Route exact path="/font-test"              component={FontTest} />
@@ -33,5 +46,11 @@ const Routes = () => (
   </Switch>
 );
 
-export default Routes;
-export {navigationDirective};
+const UnAuthRoutes = () => (
+  <Switch>
+    <Route                                      component={()=><div>NotFound</div>}/>
+    {/* <Route exact path="/login"        component={()=>(<Login/>)} /> */}
+    {/* <Redirect to="/login" /> */}
+  </Switch>
+);
+export { UnAuthRoutes, AuthRoutes, navigationDirective };
