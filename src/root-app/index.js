@@ -5,12 +5,10 @@ import { connect } from 'react-redux';
 
 import { push } from 'connected-react-router';
 
-
 import MainLayoutTest from './main-layout-test/';
 import MainLayout from './main-layout/';
 
-import {UnAuthRoutes, AuthRoutes, navigationDirective} from './navigations/root';
-import SimpleNavigation from 'widgets/simple-navigation';
+import {UnAuthRoutes, AuthRoutes} from './navigations/root';
 
 
 // import imgTest from 'common/styles/images/79.jpg';
@@ -32,7 +30,7 @@ class RootApp extends React.Component {
   }
 
   render() {
-    const isLoggedIn = false;
+    const isLoggedIn = true;
 
     let DisplayRoutesComponent = UnAuthRoutes;
     if (isLoggedIn) {
@@ -41,17 +39,9 @@ class RootApp extends React.Component {
 
     return (
       <div id="root-app" className="theme-a">
-        <MainLayout
-          header={ <div>header</div> }
-          body={ <div>body</div> }
-          foot={ <div>foot</div>}
-        />
+        <DisplayRoutesComponent />
         {/* <img   src={imgTest}/> */}
         <img className="test" />
-        <MainLayoutTest
-          Navigation={ <SimpleNavigation navigations={navigationDirective} /> }
-          Routes={ <DisplayRoutesComponent /> }
-        />
       </div>
     );
   }

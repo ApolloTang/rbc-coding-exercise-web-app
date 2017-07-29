@@ -13,15 +13,24 @@ import GridDemo   from 'modules/grids-demo';
 import LayoutDemo from 'modules/layout-demo';
 import SimpleNavigationDemo from 'modules/simple-navigation-demo';
 
+import MainLayout from '../main-layout/';
+import MainLayoutTest from '../main-layout-test/';
 
-const navigationDirective = [
+import SimpleNavigation from 'widgets/simple-navigation';
+
+const navigationDirective_auth = [
+  {to:'/profile',               displayText:'Profile'},
+  {to:'/transfer',              displayText:'Transfer'},
+  {to:'/logout',                displayText:'Logout'},
+];
+
+const navigationDirectiveStyle = [
   {to:'/font-test',               displayText:'fonts'},
   {to:'/typography',              displayText:'typography'},
   {to:'/tiles-demo',              displayText:'Tiles'},
   {to:'/elevation-test',          displayText:'elevations'},
   {to:'/grid-demo',               displayText:'grids'},
   {to:'/layout-demo',             displayText:'layout'},
-  {to:'/simple-navigation-demo',  displayText:'Simple Navigation'},
 ];
 
 const Test = ({match}) => (
@@ -31,8 +40,7 @@ const Test = ({match}) => (
 )
 
 
-
-const AuthRoutes = () => (
+const AuthContent = () => (
   <Switch>
     <Route exact path="/"                       component={()=>(<div>home</div>)} />
     <Route exact path="/font-test"              component={FontTest} />
@@ -41,10 +49,24 @@ const AuthRoutes = () => (
     <Route exact path="/elevation-test"         component={Elevations} />
     <Route exact path="/grid-demo"              component={GridDemo} />
     <Route exact path="/layout-demo"            component={LayoutDemo} />
-    <Route exact path="/simple-navigation-demo" component={SimpleNavigationDemo} />
     <Route                                      component={()=><div>NotFound</div>}/>
   </Switch>
 );
+
+const AuthRoutes = () => (
+  <div>
+    <MainLayout
+      head={ <SimpleNavigation navigations={navigationDirective_auth} /> }
+      body={ <AuthContent /> }
+      foot={ <div>foot</div>}
+    />
+    <MainLayoutTest
+      Navigation={ <SimpleNavigation navigations={navigationDirectiveStyle} /> }
+      Routes={ <AuthContent /> }
+    />
+  </div>
+);
+
 
 const UnAuthRoutes = () => (
   <Switch>
