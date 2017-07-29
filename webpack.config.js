@@ -87,7 +87,7 @@ const config_fn = env => {
             include: absolutePath_sourceFolder
           },
           {
-            test: /\.(sass)$/,
+            test: /\.(sass|scss)$/,
             use: ExtractTextPlugin.extract({
               fallback: 'style-loader',
               use: 'css-loader!sass-loader'
