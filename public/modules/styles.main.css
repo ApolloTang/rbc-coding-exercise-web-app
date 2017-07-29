@@ -2669,68 +2669,6 @@ input#root-app.theme-a::-ms-input-placeholder {
 #root-app.theme-a ._1-TV-cJLnLH-Gc56acApzV .text__size_relative-4 {
   font-size: 2.615rem;
 }
-#root-app.theme-b {
-  /* ++++ style-file: root-app/styles/app-style-init/_app-variables.less [start]*/
-  /* ++++ style-file: root-app/styles/app-style-init/_app-variables.less [end]*/
-  /* ++++ style-file: root-app/styles/app-style-init/_app-colors.less [start]*/
-  /* ++++ style-file: root-app/styles/app-style-init/_app-colors.less [end]*/
-  /* ++++ style-file: root-app/styles/app-style-init/_app-typography.less [start]*/
-  /* ++++ style-file: root-app/styles/app-style-init/_app-typography.less [end]*/
-  /* ++++ style-file: root-app/styles/app-style-init/_app-misc.less [start]*/
-  /* ++++ style-file: root-app/styles/app-style-init/_app-misc.less [end]*/
-}
-#root-app.theme-b input::-webkit-input-placeholder {
-  /* WebKit, Blink, Edge */
-  color: rgba(0, 0, 0, 0.38);
-}
-input#root-app.theme-b::-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: rgba(0, 0, 0, 0.38);
-  opacity: 1;
-}
-input#root-app.theme-b::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: rgba(0, 0, 0, 0.38);
-  opacity: 1;
-}
-input#root-app.theme-b:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: rgba(0, 0, 0, 0.38);
-}
-input#root-app.theme-b::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: rgba(0, 0, 0, 0.38);
-}
-#root-app.theme-b input {
-  color: rgba(0, 0, 0, 0.54);
-}
-#root-app.theme-b ._1-TV-cJLnLH-Gc56acApzV .text__size_headline {
-  font-size: 0.923rem;
-}
-#root-app.theme-b ._1-TV-cJLnLH-Gc56acApzV .text__size_display-1 {
-  font-size: 0.923rem;
-}
-#root-app.theme-b ._1-TV-cJLnLH-Gc56acApzV .text__size_display-2 {
-  font-size: 0.923rem;
-}
-#root-app.theme-b ._1-TV-cJLnLH-Gc56acApzV .text__size_relative-nagative1 {
-  font-size: 0.923rem;
-}
-#root-app.theme-b ._1-TV-cJLnLH-Gc56acApzV .text__size_relative-0 {
-  font-size: 0.923rem;
-}
-#root-app.theme-b ._1-TV-cJLnLH-Gc56acApzV .text__size_relative-1 {
-  font-size: 0.923rem;
-}
-#root-app.theme-b ._1-TV-cJLnLH-Gc56acApzV .text__size_relative-2 {
-  font-size: 0.923rem;
-}
-#root-app.theme-b ._1-TV-cJLnLH-Gc56acApzV .text__size_relative-3 {
-  font-size: 0.923rem;
-}
-#root-app.theme-b ._1-TV-cJLnLH-Gc56acApzV .text__size_relative-4 {
-  font-size: 0.923rem;
-}
 /* ++++ style-file: modules/typography-test/style.less [end] */
 /* ++++ style-file: modules/tiles-demo/style.less [start] */
 #root-app.theme-a {
