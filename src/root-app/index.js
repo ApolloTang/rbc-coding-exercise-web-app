@@ -7,7 +7,8 @@ import Routes from './routes';
 import {navigationDirective} from './routes';
 
 
-import styles from './styles.less';
+import styles_less from './styles.less';
+import styles_scss from './styles.scss';
 class RootApp extends React.Component {
   constructor(props) {
     super(props);
