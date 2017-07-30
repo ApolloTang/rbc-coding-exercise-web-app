@@ -21,7 +21,11 @@ class Screen_Login extends React.Component {
 
   componentDidMount() {
     this.props.dispatch_init();
-    this.props.dispatch_fetchUserById(this.props.userId);
+    this.props.dispatch_getTransferDefaultByUserId(this.props.userId);
+  }
+
+  handle_submit = () => {
+    this.props.dispatch_submitDraft(this.props.userId);
   }
 
   render() {
@@ -35,8 +39,8 @@ class Screen_Login extends React.Component {
 
     return (
       <div>
-        <img src={_.get(this.props, `userProps.photo_url`, '')}/>
-        <pre><code>{JSON.stringify(this.props.userProps, null, 4)}</code></pre>
+        <pre><code>{JSON.stringify(this.props.transferDraft, null, 4)}</code></pre>
+        <button onClick={this.handle_submit} > submit</button>
       </div>
     );
   }

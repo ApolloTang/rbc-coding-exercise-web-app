@@ -3,14 +3,14 @@ import Action from './action';
 
 
 const mapStoreToProps = (store) => {
-  const isLoading = _.get(store, `appUI.profile.isLoading`, false);
   const userId = _.get(store, `sessions.user.userId`, void 0);
-  const userProps = _.get(store, `sessions.user.userProps`, void 0);
+  const isLoading = _.get(store, `appUI.profile.isLoading`, false);
+  const transferDraft = _.get(store, `appUI.transfer.transferDraft`, null);
 
   return {
-    isLoading,
     userId,
-    userProps
+    isLoading,
+    transferDraft
   };
 };
 
@@ -19,8 +19,11 @@ const mapDispatchToProps = dispatch => ({
   dispatch_init() {
     dispatch(Action.init());
   },
-  dispatch_fetchUserById(userId) {
-    dispatch(Action.getUserById(userId));
+  dispatch_getTransferDefaultByUserId(userId) {
+    dispatch(Action.getTransferDefaultByUserId(userId));
+  },
+  dispatch_submitDraft(userId) {
+    dispatch(Action.submitDraft(userId));
   },
 });
 

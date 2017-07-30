@@ -16,6 +16,7 @@ import SimpleNavigationDemo from 'modules/simple-navigation-demo';
 
 import Login from 'app-ui/containers/login/index.js';
 import Profile from 'app-ui/containers/profile/index.js';
+import Transfer from 'app-ui/containers/transfer/index.js';
 
 
 import MainLayout from '../main-layout/';
@@ -56,6 +57,7 @@ const AuthContent = () => (
     <Route exact path="/layout-demo"            component={LayoutDemo} />
 
     <Route exact path="/profile"                component={Profile} />
+    <Route exact path="/transfer"               component={Transfer} />
 
     <Route                                      component={()=><div>NotFound</div>}/>
   </Switch>
@@ -68,10 +70,10 @@ const AuthRoutes = () => (
       body={ <AuthContent /> }
       foot={ <div>foot</div>}
     />
-    <MainLayoutTest
-      Navigation={ <SimpleNavigation navigations={navigationDirectiveStyle} /> }
-      Routes={ <AuthContent /> }
-    />
+    {/* <MainLayoutTest */}
+    {/*   Navigation={ <SimpleNavigation navigations={navigationDirectiveStyle} /> } */}
+    {/*   Routes={ <AuthContent /> } */}
+    {/* /> */}
   </div>
 );
 

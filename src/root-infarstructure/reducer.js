@@ -2,8 +2,10 @@ import {combineReducers} from 'redux';
 
 
 import login from  'app-ui/containers/login/reducer';
+import transfer from  'app-ui/containers/transfer/reducer';
 const appUI = combineReducers({
-  login
+  login,
+  transfer
 });
 
 

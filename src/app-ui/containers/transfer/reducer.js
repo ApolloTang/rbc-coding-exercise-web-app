@@ -3,22 +3,48 @@ import AN from 'root-infarstructure/action-names';
 
 const initialState = {
   isLoading: false,
+  transferDraft: null,
 };
 
-const reducer_login = (state = { ...initialState }, action) => {
+const reducer_transfer = (state = { ...initialState }, action) => {
   switch (action.type) {
-    case AN[`user__fetch_begin`]: {
+    case AN[`transfer__transferDefault_fetch_begin`]: {
       const state_prev = { ...state };
       const state_next = { ...state_prev, isLoading: true};
       return state_next;
     }
-    case AN[`user__fetch_success`]: {
-      const isLoggedIn = _.get(action, `payload.isLoggedIn`, false);
+    case AN[`transfer__transferDefault_fetch_success`]: {
+      const transferDefault = _.get(action, `payload.transferDefault`, false);
+      const state_prev = { ...state };
+      const state_next = {
+        ...state_prev,
+        isLoading: false,
+        transferDraft: transferDefault
+      };
+      return state_next;
+    }
+    case AN[`transfer__transferDefault_fetch_fail`]: {
       const state_prev = { ...state };
       const state_next = { ...state_prev, isLoading: false };
       return state_next;
     }
-    case AN[`user__createSession_fail`]: {
+
+    case AN[`transfer__transfer_submit_begin`]: {
+      const state_prev = { ...state };
+      const state_next = { ...state_prev, isLoading: true};
+      return state_next;
+    }
+    case AN[`transfer__transfer_submit_success`]: {
+      const transferConfirm = _.get(action, `payload.transferConfirm`, false);
+      const state_prev = { ...state };
+      const state_next = {
+        ...state_prev,
+        isLoading: false,
+        transferConfirm: transferConfirm
+      };
+      return state_next;
+    }
+    case AN[`transfer__transfer_submit_fail`]: {
       const state_prev = { ...state };
       const state_next = { ...state_prev, isLoading: false };
       return state_next;
@@ -29,4 +55,4 @@ const reducer_login = (state = { ...initialState }, action) => {
   }
 };
 
-export default reducer_login;
+export default reducer_transfer;
