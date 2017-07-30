@@ -60,8 +60,16 @@ class Screen_profile extends React.Component {
 
     return (
       <div>
-        <p id="transfer-alert-message" role="alert" className="alert-message">{this.state.alert}</p>
-
+        {
+          (this.props.transferingState === 'inProgress') ?
+            <div>
+              <i className="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+              <p id="transfer-alert-message" role="alert" className="alert-message">Transfering in progress</p>
+            </div> : null
+        } {
+          (this.props.transferingState === 'success') ?
+          <div><p id="transfer-alert-message" role="alert" className="alert-message">Transfering success</p></div> : null
+        }
         <fieldset>
           <legend>From</legend>
 
@@ -164,7 +172,7 @@ class Screen_profile extends React.Component {
 
         {/* <pre><code>{JSON.stringify(this.props.transferDraft, null, 4)}</code></pre> */}
         {/* <pre><code>{JSON.stringify(this.props.PS, null, 4)}</code></pre> */}
-        <button onClick={this.handle_submit} > submit</button>
+        <button onClick={this.handle_submit} >send {this.props.PS.amount}</button>
       </div>
     );
   }

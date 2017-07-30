@@ -7,6 +7,7 @@ const mapStoreToProps = (store) => {
   const userId = _.get(store, `sessions.user.userId`, void 0);
   const isLoading = _.get(store, `appUI.profile.isLoading`, false);
   const transferDraft = _.get(store, `appUI.transfer.transferDraft`, null);
+  const transferingState = _.get(store, `appUI.transfer.transferingState`, null);
 
   const PS = {
     account_name : _.get(transferDraft, `from.account_name`, '' ),
@@ -14,13 +15,14 @@ const mapStoreToProps = (store) => {
     account_balance : get_presentation_money(transferDraft, `from.account_balance`, '$0,0.00', '$0.00' ),
     to_name : _.get(transferDraft, `to.name`, '' ),
     to_photo_url : _.get(transferDraft, `to.photo_url`, '' ),
-    amount : get_presentation_money(transferDraft, `amount`, '$0,0.00', '$0.00' ),
+    amount : get_presentation_money(transferDraft, `amount`, '$00.00', '$0.00' ),
     transferFrequency : _.get(transferDraft, `transferFrequency`, 'every-day'),
   };
 
   const data_out = {
     userId,
     isLoading,
+    transferingState,
     transferDraft,
     PS
   };
@@ -40,7 +42,7 @@ const mapDispatchToProps = dispatch => ({
     dispatch(Action.transferFormFieldChange(fieldName, fieldValue));
   },
   dispatch_submitDraft() {
-    dispatch(Action.submitDraft(userId));
+    dispatch(Action.submitDraft());
   },
 });
 

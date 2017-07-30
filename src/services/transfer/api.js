@@ -27,7 +27,9 @@ const api_transfer = {
   submitDraft(transferDraft) {
     return new Promise( (rs, rj) => {
       const transferConfirm = transferDraft;
-      rs(transferConfirm);
+      setTimeout(()=>{
+        rs(transferConfirm);
+      }, 3000)
     })
   },
 }
