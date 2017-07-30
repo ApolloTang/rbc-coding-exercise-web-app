@@ -38,7 +38,7 @@ class Screen_profile extends React.Component {
   }
 
   handle_transferAmount = (e) => {
-    console.log('handle_transferAmount:', e.target.value);
+    console.log('handle_transferAmount:', e);
   }
 
   handle_frequencyChanged = (e) => {
@@ -76,11 +76,20 @@ class Screen_profile extends React.Component {
               </label>
             </div>
             <div className="input-wrap">
+
               <input
                 onChange={ this.handle_transferAmount }
                 type="text"
                 id="transfer-amount"
                 aria-labelledby="transfer-amount_label"
+                value={amount}
+                />
+
+              <ReduxInput
+                onChange={ this.handle_transferAmount }
+                type="text"
+                id="transfer-amount"
+                ariaLabelledby="transfer-amount_label"
                 value={amount}
                 />
             </div>

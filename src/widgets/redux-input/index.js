@@ -27,6 +27,7 @@ class ReduxInput extends React.Component {
     id: null,
     className: '',
     type: 'text',
+    ariaLabelledby: ''
   }
   componentWillMount () {
       this.emitChange = _.debounce(value => {
@@ -104,6 +105,7 @@ class ReduxInput extends React.Component {
               onChange={this.onInputChange}
               onBlur={this.onInputBlur}
               id={this.props.id}
+              aria-labelledby={this.props.ariaLabelledby}
           />
       );
   }
@@ -119,6 +121,7 @@ ReduxInput.propTypes = {
   id: PropTypes.string,
   type: PropTypes.oneOf(['text', 'search', null]),
   className: PropTypes.string,
+  ariaLabelledby: PropTypes.string,
 };
 export default ReduxInput;
 
