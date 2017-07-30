@@ -58,13 +58,7 @@ class ReduxInput extends React.Component {
   }
 
   handle_keyUp = (e) => {
-    console.log(e.keyCode, e.target.value);
-    // const RETURN = 13;
-    // const keyCode = e.keyCode;
-    // if (keyCode === RETURN && !/^\s*$/.test(this.state.inputText)) {
-    //   this.props.createTodo(this.state.inputText);
-    //   this.setState({ inputText: ''});
-    // }
+    // console.log(e.keyCode, e.target.value);
   }
 
   onInputChange (event) {

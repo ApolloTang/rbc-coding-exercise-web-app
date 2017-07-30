@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { push } from 'connected-react-router';
 import ReduxInput from 'widgets/redux-input/';
+import numeral from 'numeral';
 
 import {
   string,
@@ -37,8 +38,9 @@ class Screen_profile extends React.Component {
     this.setState({alert:Date.now().toString()})
   }
 
-  handle_transferAmount = (e) => {
-    console.log('handle_transferAmount:', e);
+  handle_transferAmount = (amount) => {
+    const amount_new = numeral(amount).value();
+    console.log('handle_transferAmount:', amount, amount_new);
   }
 
   handle_frequencyChanged = (e) => {
