@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 import { push } from 'connected-react-router';
 
-import MainLayoutTest from './main-layout-test/';
+// import MainLayoutTest from './main-layout-test/';
 import MainLayout from './main-layout/';
 
 import {UnAuthRoutes, AuthRoutes} from './navigations/root';
@@ -13,7 +13,7 @@ import {UnAuthRoutes, AuthRoutes} from './navigations/root';
 
 
 //import imgTest from 'common/styles/images/79.jpg'
-import styles_less from './styles.less';
+// import styles_less from './styles.less';
 import styles_scss from './styles.scss';
 
 

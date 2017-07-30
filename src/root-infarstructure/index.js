@@ -9,7 +9,7 @@ import {BrowserRouter} from 'react-router-dom';
 
 import RootApp from 'root-app';
 
-import style from './style';
+import style from './style.scss';
 
 const Root = ()=>(
   <div className={`root ${style['module-style']}`}>

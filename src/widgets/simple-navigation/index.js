@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { BrowserRouter, NavLink } from 'react-router-dom';
 
-import style from './style.less';
+import style from './style.scss';
 
 const ModuleRoot = (props) => {
   return (

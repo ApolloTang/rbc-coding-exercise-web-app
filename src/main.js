@@ -1,7 +1,8 @@
 import React from 'react';
 import {render} from 'react-dom';
 
-import style from 'main.less';
+// import style from 'main.less';
+import style from 'main.scss';
 import fonts from 'common/styles/fonts';
 
 if (target!=='production') {

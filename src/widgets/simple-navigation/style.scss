@@ -1,0 +1,39 @@
+/* ++++ style-file widget/simple-navigation.less [start] */
+
+
+:local(.module-style) {
+  @import "~common/styles/index.scss";
+  // @include .mixin-clearfix;
+
+  ul {
+    list-style-type: none;
+    li {
+      background: #eee;
+    }
+  }
+
+  a {
+    display: inline;
+    line-height: 1.5;
+    text-decoration: none;
+    background: #eee;
+
+    outline: none;
+    &:hover {
+      color: red;
+    }
+    &:focus {
+      outline: none;
+    }
+    &.is-active {
+      color: red;
+    }
+
+  }
+
+  .horizontal {
+    li { display: inline; }
+  }
+}
+
+/* ++++ style-file widget/simple-navigation.less [end] */

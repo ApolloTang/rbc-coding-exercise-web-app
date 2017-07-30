@@ -3,6 +3,13 @@
 
 #root-app.theme-a {
   @import "./styles/reset.scss";
+  @import "~common/styles/index.scss";
+  @import "./styles/app-styles-theme-a/init-scss/index.scss";
+
+  @include mixin-clearfix;
+
+  color: $global-text-color;
+  font-family: $global-default-font;
 }
 
 /* ++++ style-file: src/root-app/styles.scss [end] */
