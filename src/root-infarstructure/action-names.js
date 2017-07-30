@@ -1,7 +1,9 @@
-import myDomain from 'app/containers/my-domain/actions-names';
+import login from 'app-ui/containers/login/action-names';
+import authentication from 'services/sessions/authentication/action-names'
 
 const symbols = [
-  ...myDomain,
+  ...login,
+  ...authentication
 ].reduce((acc, eventName) => ({
     ...acc,
     [`${eventName}`]: acc[eventName] ? duplicateEventNameError(eventName) : Symbol.for(eventName)

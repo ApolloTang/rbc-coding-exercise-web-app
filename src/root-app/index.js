@@ -30,7 +30,7 @@ class RootApp extends React.Component {
   }
 
   render() {
-    const isLoggedIn = true;
+    const isLoggedIn = false;
 
     let DisplayRoutesComponent = UnAuthRoutes;
     if (isLoggedIn) {

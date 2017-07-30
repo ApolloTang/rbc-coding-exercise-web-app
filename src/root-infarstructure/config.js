@@ -1,3 +1,3 @@
 export default {
-  'noConfigaration': true
+  'url_api': 'some.domain.com'
 };
