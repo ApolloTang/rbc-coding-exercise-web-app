@@ -39,7 +39,7 @@ const mapDispatchToProps = dispatch => ({
   dispatch_transferFormFieldChange(fieldName, fieldValue) {
     dispatch(Action.transferFormFieldChange(fieldName, fieldValue));
   },
-  dispatch_submitDraft(userId) {
+  dispatch_submitDraft() {
     dispatch(Action.submitDraft(userId));
   },
 });

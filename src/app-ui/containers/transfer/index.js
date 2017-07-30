@@ -34,8 +34,8 @@ class Screen_profile extends React.Component {
   }
 
   handle_submit = () => {
-    // this.props.dispatch_submitDraft(this.props.userId);
-    this.setState({alert:Date.now().toString()})
+    this.props.dispatch_submitDraft();
+    // this.setState({alert:Date.now().toString()})
   }
 
   handle_transferAmount = (amount) => {
