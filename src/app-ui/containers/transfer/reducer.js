@@ -32,6 +32,22 @@ const reducer_transfer = (state = { ...initialState }, action) => {
       return state_next;
     }
 
+    case AN[`transfer__transfer_fieldChange`]: {
+      const fieldName = _.get(action, `payload.fieldName`, '');
+      const fieldValue = _.get(action, `payload.fieldValue`, '');
+
+
+      const state_prev = { ...state };
+      const state_next = {
+        ...state_prev,
+        transferDraft: {
+          ...state_prev.transferDraft,
+          [fieldName]: fieldValue
+        }
+      };
+      return state_next;
+    }
+
     case AN[`transfer__transfer_submit_begin`]: {
       const state_prev = { ...state };
       const state_next = { ...state_prev, isLoading: true};

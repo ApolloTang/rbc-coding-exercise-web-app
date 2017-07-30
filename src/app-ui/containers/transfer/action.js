@@ -40,6 +40,14 @@ const Action_transfer = {
 
     };
   },
+  transferFormFieldChange(fieldName, fieldValue) {
+    return (dispatch, getState) => {
+      dispatch({
+        type: AN[`transfer__transfer_fieldChange`],
+        payload: {fieldName, fieldValue},
+      });
+    };
+  },
   submitDraft(userId) {
     return (dispatch, getState) => {
       const transferDraft = _.get(getState(), `appUI.transfer.transferDraft`, null);

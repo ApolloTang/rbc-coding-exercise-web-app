@@ -7,7 +7,9 @@ const actionNames = [
 
   `transfer__transfer_submit_begin`,
   `transfer__transfer_submit_success`,
-  `transfer__transfer_submit_fail`
+  `transfer__transfer_submit_fail`,
+
+  `transfer__transfer_fieldChange`
 ];
 
 export default actionNames;

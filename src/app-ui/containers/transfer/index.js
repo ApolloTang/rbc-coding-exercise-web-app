@@ -41,20 +41,15 @@ class Screen_profile extends React.Component {
   handle_transferAmount = (amount) => {
     const amount_new = numeral(amount).value();
     console.log('handle_transferAmount:', amount, amount_new);
+    this.props.dispatch_transferFormFieldChange('amount', amount_new);
   }
 
   handle_frequencyChanged = (e) => {
     console.log('handle_frequencyChanged:', e.target.value);
+    this.props.dispatch_transferFormFieldChange('transferFrequency', e.target.value);
   }
 
   render() {
-    console.log('xxxxxx: ', this.props)
-
-    const amount = _.get(this.props, `transferDraft.amount_presentation`, '$00.00');
-    const frequency = _.get(this.props, `transferDraft.transferFrequency`, 'every-day');
-
-    console.log('xxxxx: frequency', frequency)
-
     if (this.props.isLoading) {
       return(
         <div>
@@ -65,12 +60,53 @@ class Screen_profile extends React.Component {
 
     return (
       <div>
-
         <p id="transfer-alert-message" role="alert" className="alert-message">{this.state.alert}</p>
 
         <fieldset>
-          <legend>Transfer details</legend>
+          <legend>From</legend>
 
+            <div className="form-row">
+              <div className="label-wrap">
+                <label>
+                  Account Name:
+                </label>
+              </div>
+              <div className="text-wrap">
+                <span>
+                  {this.props.PS.account_name}
+                </span>
+              </div>
+            </div>
+
+            <div className="form-row">
+              <div className="label-wrap">
+                <label>
+                  Account Number:
+                </label>
+              </div>
+              <div className="text-wrap">
+                <span>
+                  {this.props.PS.account_number}
+                </span>
+              </div>
+            </div>
+
+            <div className="form-row">
+              <div className="label-wrap">
+                <label>
+                  Current Balance:
+                </label>
+              </div>
+              <div className="text-wrap">
+                <span>
+                  {this.props.PS.account_balance}
+                </span>
+              </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Transfer details</legend>
           <div data-fn="transfer-amount" >
             <div className="label-wrap">
               <label id="transfer-amount_label" htmlFor="transfer-amount">
@@ -78,19 +114,12 @@ class Screen_profile extends React.Component {
               </label>
             </div>
             <div className="input-wrap">
-              {/* <input */}
-              {/*   onChange={ this.handle_transferAmount } */}
-              {/*   type="text" */}
-              {/*   id="transfer-amount" */}
-              {/*   aria-labelledby="transfer-amount_label" */}
-              {/*   value={amount} */}
-              {/*   /> */}
               <ReduxInput
                 onChange={ this.handle_transferAmount }
                 type="text"
                 id="transfer-amount"
                 ariaLabelledby="transfer-amount_label"
-                value={amount}
+                value={this.props.PS.amount}
                 shouldAllowInput={(v)=>{
                   const r = /^\$?\d+(,\d{3})*\.?[0-9]?[0-9]?$/;
                   // https://stackoverflow.com/questions/8829765/regular-expression-for-dollar-amount-in-javascript
@@ -106,7 +135,7 @@ class Screen_profile extends React.Component {
             <div className="select-wrap">
               <select
                 onChange={ this.handle_frequencyChanged }
-                value={frequency}
+                value={this.props.PS.transferFrequency}
                 id="transfer-frequency"
                 name="select" >
                 <option value="every-day">Every day</option>
@@ -116,9 +145,25 @@ class Screen_profile extends React.Component {
               </select>
             </div>
           </div>
-
         </fieldset>
-        <pre><code>{JSON.stringify(this.props.transferDraft, null, 4)}</code></pre>
+
+        <fieldset>
+          <legend>Send To</legend>
+          {/* <div> <img src={this.props.PS.to_photo_url} /> </div> */}
+          <div>
+            <span>
+              {this.props.PS.to_name}
+            </span>
+          </div>
+          <div>
+            <span>
+              Change recipient
+            </span>
+          </div>
+        </fieldset>
+
+        {/* <pre><code>{JSON.stringify(this.props.transferDraft, null, 4)}</code></pre> */}
+        {/* <pre><code>{JSON.stringify(this.props.PS, null, 4)}</code></pre> */}
         <button onClick={this.handle_submit} > submit</button>
       </div>
     );
