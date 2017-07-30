@@ -1,8 +1,10 @@
+import _ from 'lodash';
 import AN from 'root-infarstructure/action-names';
 
 const initialState = {
   isLoading: false,
   loginError: '',
+  isLoggedIn: false
 };
 
 const reducer_login = (state = { ...initialState }, action) => {
@@ -13,8 +15,9 @@ const reducer_login = (state = { ...initialState }, action) => {
       return state_next;
     }
     case AN[`login__createSession_success`]: {
+      const isLoggedIn = _.get(action, `payload.isLoggedIn`, false);
       const state_prev = { ...state };
-      const state_next = { ...state_prev, isLoading: false };
+      const state_next = { ...state_prev, isLoading: false, isLoggedIn };
       return state_next;
     }
     case AN[`login__createSession_fail`]: {

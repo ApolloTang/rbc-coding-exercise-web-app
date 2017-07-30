@@ -3,10 +3,9 @@ import Action from './action';
 
 
 const mapStoreToProps = (store) => {
-  const isLoggedIn = _.get(store, `sessions.authentication.isLoggedIn`, false);
-  const isLoading = _.get(store, `app.login.isLoading`, false);
-  const loginError = _.get(store, `app.login.loginError`, '');
-  const orientation = _.get(store, `device.orientation`, void 0);
+  const isLoggedIn = _.get(store, `appUI.login.isLoggedIn`, false);
+  const isLoading = _.get(store, `appUI.login.isLoading`, false);
+  const loginError = _.get(store, `appUI.login.loginError`, '');
 
   return {
     isLoggedIn,
@@ -14,7 +13,6 @@ const mapStoreToProps = (store) => {
     loginError,
   };
 };
-
 
 
 const mapDispatchToProps = dispatch => ({

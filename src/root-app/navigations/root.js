@@ -74,7 +74,7 @@ const AuthRoutes = () => (
 const UnAuthRoutes = () => (
   <Switch>
     <Route exact path="/login"        component={()=>(<Login/>)} />
-    {/* <Redirect to="/login" /> */}
+    <Redirect to="/login" />
     <Route                                      component={()=><div>NotFound</div>}/>
   </Switch>
 );

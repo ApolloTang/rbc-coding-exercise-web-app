@@ -8,20 +8,23 @@ import config from 'root-infarstructure/config';
 const apiUrl= _.get(config, `url_api`, void 0);
 
 const api_authentication = {
-  createSession(email, password, extra) {
+  createSession(email, password) {
     const payload = {
       email,
       password,
     };
 
+    //@TODO API authentication not impliment
+
     return new Promise((rs, rj)=>{
       const token = `token`;
-
-      store.dispatch({
-        type: AN[`sessions_authenticate_createSession_success`],
-        payload: { token },
-      });
-      rs('token');
+      setTimeout( function(){
+        store.dispatch({
+          type: AN[`sessions_authenticate_createSession_success`],
+          payload: { token },
+        });
+        rs('token');
+      }, 3000);
     });
 
   }

@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 import AN from 'root-infarstructure/action-names';
 import API_authentication from 'services/sessions/authentication/api';
 
@@ -9,12 +11,12 @@ const Action_login = {
       });
     };
   },
-  createSession(email, password, extra) {
+  createSession(email, password) {
     return (dispatch, getState) => {
       dispatch({
         type: AN[`login__createSession_begin`],
       });
-      return API_authentication.createSession(email, password, extra).then(
+      return API_authentication.createSession(email, password).then(
         (session) => {
           if (session.httpError) {
             if (session.httpError.message) {
@@ -29,9 +31,11 @@ const Action_login = {
               });
             }
           } else {
+            console.log('xxxxxxx: ', getState() );
+            const isLoggedIn = !!_.get(getState(), `sessions.authentication.token`, false );
             dispatch({
               type: AN[`login__createSession_success`],
-              payload: session,
+              payload: {isLoggedIn: isLoggedIn},
             });
           }
         },
