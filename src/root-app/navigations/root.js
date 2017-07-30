@@ -15,6 +15,8 @@ import SimpleNavigationDemo from 'modules/simple-navigation-demo';
 
 
 import Login from 'app-ui/containers/login/index.js';
+import Profile from 'app-ui/containers/profile/index.js';
+
 
 import MainLayout from '../main-layout/';
 import MainLayoutTest from '../main-layout-test/';
@@ -52,6 +54,9 @@ const AuthContent = () => (
     <Route exact path="/elevation-test"         component={Elevations} />
     <Route exact path="/grid-demo"              component={GridDemo} />
     <Route exact path="/layout-demo"            component={LayoutDemo} />
+
+    <Route exact path="/profile"                component={Profile} />
+
     <Route                                      component={()=><div>NotFound</div>}/>
   </Switch>
 );
@@ -75,7 +80,7 @@ const UnAuthRoutes = () => (
   <Switch>
     <Route exact path="/login"        component={()=>(<Login/>)} />
     <Redirect to="/login" />
-    <Route                                      component={()=><div>NotFound</div>}/>
+    <Route                            component={()=><div>NotFound</div>}/>
   </Switch>
 );
 export { UnAuthRoutes, AuthRoutes, navigationDirective };

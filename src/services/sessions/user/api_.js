@@ -25,7 +25,7 @@ const api_authentication = {
           payload: { token, userId },
         });
         rs({token, userId});
-      }, 1000);
+      }, 3000);
     });
 
   }

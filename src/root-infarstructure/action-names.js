@@ -1,9 +1,13 @@
 import login from 'app-ui/containers/login/action-names';
+import profile from 'app-ui/containers/profile/action-names';
 import authentication from 'services/sessions/authentication/action-names'
+import user from 'services/sessions/user/action-names'
 
 const symbols = [
   ...login,
-  ...authentication
+  ...profile,
+  ...authentication,
+  ...user
 ].reduce((acc, eventName) => ({
     ...acc,
     [`${eventName}`]: acc[eventName] ? duplicateEventNameError(eventName) : Symbol.for(eventName)

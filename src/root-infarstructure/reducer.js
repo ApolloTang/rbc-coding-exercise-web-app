@@ -8,8 +8,10 @@ const appUI = combineReducers({
 
 
 import authentication from 'services/sessions/authentication/reducer';
+import user from 'services/sessions/user/reducer';
 const sessions = combineReducers({
-  authentication
+  authentication,
+  user
 });
 
 const rootReducer = combineReducers({
