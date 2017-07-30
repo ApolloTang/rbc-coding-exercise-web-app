@@ -1,6 +1,9 @@
+html {
+  overflow: hidden; }
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  padding: 0px;
+  background-image: url(/images/background.jpg); }
 
 a {
   color: #00B7FF; }
