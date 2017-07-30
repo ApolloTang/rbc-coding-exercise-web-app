@@ -31,7 +31,6 @@ const Action_login = {
               });
             }
           } else {
-            console.log('xxxxxxx: ', getState() );
             const isLoggedIn = !!_.get(getState(), `sessions.authentication.token`, false );
             dispatch({
               type: AN[`login__createSession_success`],

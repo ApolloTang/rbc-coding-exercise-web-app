@@ -12,8 +12,7 @@ import {UnAuthRoutes, AuthRoutes} from './navigations/root';
 
 
 
-
-//import imgTest from 'common/styles/images/79.jpg';
+//import imgTest from 'common/styles/images/79.jpg'
 import styles_less from './styles.less';
 import styles_scss from './styles.scss';
 
@@ -44,8 +43,6 @@ class RootApp extends React.Component {
   }
 
   render() {
-    console.log('YYYYYYYYYYYYYYY:', this.props)
-
     const isLoggedIn = this.props.isLoggedIn;
 
     let DisplayRoutesComponent = UnAuthRoutes;
@@ -56,8 +53,6 @@ class RootApp extends React.Component {
     return (
       <div id="root-app" className="theme-a">
         <DisplayRoutesComponent />
-        {/* <img   src={imgTest}/> */}
-        <img className="test" />
       </div>
     );
   }
