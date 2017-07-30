@@ -12,29 +12,29 @@ const api_user = {
   getAll() {
     // not impliment
   },
-  getOne(userId) {
-    return new Promise( (rs, rj) => {
-      const userProps = { name: "Keanu Reeves", photo_url: "http://i.imgur.com/Y7u78c4.jpg" };
-      store.dispatch( {
-        type: AN[`sessions_user_update`],
-        payload: {userProps}
-      });
-      rs({userProps});
-    })
-  },
   // getOne(userId) {
-  //   return createHttp
-  //     .get(`${rootUrl}/user/${userId}`)
-  //     .then(
-  //       user => {
-  //         store.dispatch( {
-  //           type: c[`session_user_update`],
-  //           payload: {user}
-  //         });
-  //         return user;
-  //       }
-  //     );
+  //   return new Promise( (rs, rj) => {
+  //     const userProps = { name: "Keanu Reeves", photo_url: "http://i.imgur.com/Y7u78c4.jpg" };
+  //     store.dispatch( {
+  //       type: AN[`sessions_user_update`],
+  //       payload: {userProps}
+  //     });
+  //     rs({userProps});
+  //   })
   // },
+  getOne(userId) {
+    return createHttp
+      .get(`http://localhost:3001/api/user`)
+      .then(
+        userProps => {
+          store.dispatch( {
+            type: AN[`sessions_user_update`],
+            payload: {userProps}
+          });
+          return userProps;
+        }
+      );
+  },
   create(payload) {
     // not impliment
   },

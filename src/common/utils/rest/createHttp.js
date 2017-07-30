@@ -19,8 +19,6 @@ const get = (url, /* params = {} */ ) => {
   return fetch(url, init).then(
     response => {
       if (!response.ok) {
-        // https://www.tjvantoll.com/2015/09/13/fetch-and-errors/#comment-2254295840
-        // throw Error(response.statusText);
         return { httpError: response };
       }
       return response.json()
