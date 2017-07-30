@@ -56,6 +56,17 @@ class ReduxInput extends React.Component {
           (nextProps.disabled !== this.props.disabled)
       );
   }
+
+  handle_keyUp = (e) => {
+    console.log(e.keyCode, e.target.value);
+    // const RETURN = 13;
+    // const keyCode = e.keyCode;
+    // if (keyCode === RETURN && !/^\s*$/.test(this.state.inputText)) {
+    //   this.props.createTodo(this.state.inputText);
+    //   this.setState({ inputText: ''});
+    // }
+  }
+
   onInputChange (event) {
       const domString = event.target.value;
       const nextValue = this.props.formatOut(domString);
@@ -103,6 +114,7 @@ class ReduxInput extends React.Component {
               type={this.props.type}
               value={this.state.displayedString}
               onChange={this.onInputChange}
+              onKeyUp={ this.handle_keyUp }
               onBlur={this.onInputBlur}
               id={this.props.id}
               aria-labelledby={this.props.ariaLabelledby}

@@ -76,22 +76,24 @@ class Screen_profile extends React.Component {
               </label>
             </div>
             <div className="input-wrap">
-
-              <input
-                onChange={ this.handle_transferAmount }
-                type="text"
-                id="transfer-amount"
-                aria-labelledby="transfer-amount_label"
-                value={amount}
-                />
-
+              {/* <input */}
+              {/*   onChange={ this.handle_transferAmount } */}
+              {/*   type="text" */}
+              {/*   id="transfer-amount" */}
+              {/*   aria-labelledby="transfer-amount_label" */}
+              {/*   value={amount} */}
+              {/*   /> */}
               <ReduxInput
                 onChange={ this.handle_transferAmount }
                 type="text"
                 id="transfer-amount"
                 ariaLabelledby="transfer-amount_label"
                 value={amount}
-                />
+                shouldAllowInput={(v)=>{
+                  const r = /^\$?\d+(,\d{3})*\.?[0-9]?[0-9]?$/;
+                  // https://stackoverflow.com/questions/8829765/regular-expression-for-dollar-amount-in-javascript
+                  return r.test(v) || /^\s*$/.test(v);
+                }} />
             </div>
           </div>
 
