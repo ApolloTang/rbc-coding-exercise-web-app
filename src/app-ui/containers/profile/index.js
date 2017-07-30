@@ -14,7 +14,7 @@ import selector from './selector';
 const {mapStoreToProps, mapDispatchToProps} = selector;
 
 @connect(mapStoreToProps, mapDispatchToProps)
-class Screen_Login extends React.Component {
+class Screen_profile extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -25,6 +25,7 @@ class Screen_Login extends React.Component {
   }
 
   render() {
+    console.log('xxxx: ',  this.props)
     if (this.props.isLoading) {
       return(
         <div>
@@ -37,9 +38,10 @@ class Screen_Login extends React.Component {
       <div>
         <img src={_.get(this.props, `userProps.photo_url`, '')}/>
         <pre><code>{JSON.stringify(this.props.userProps, null, 4)}</code></pre>
+          <span>hello</span>
       </div>
     );
   }
 }
 
-export default Screen_Login;
+export default Screen_profile;

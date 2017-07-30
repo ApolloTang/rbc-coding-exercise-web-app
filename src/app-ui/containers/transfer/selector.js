@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import numeral from 'numeral';
 import Action from './action';
 
 
@@ -7,11 +8,16 @@ const mapStoreToProps = (store) => {
   const isLoading = _.get(store, `appUI.profile.isLoading`, false);
   const transferDraft = _.get(store, `appUI.transfer.transferDraft`, null);
 
-  return {
+  const data = {
     userId,
     isLoading,
     transferDraft
   };
+  const data_out = _.cloneDeep(data);
+  decorator_presentation(data_out,  `transferDraft.amount`, '$0,0.00', '$0.00' )
+  decorator_presentation(data_out,  `transferDraft.from.account_balance`, '$0,0.00', '$0.00' )
+
+  return data_out;
 };
 
 
@@ -28,3 +34,8 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default { mapStoreToProps, mapDispatchToProps };
+
+function decorator_presentation(data, path, format, fallback) {
+  const data_clone = _.get(data, path, fallback); // cloned premitive value;
+  return _.set(data, `${path}_presentation`, numeral( data_clone ).format( format ))
+};

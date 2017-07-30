@@ -6,6 +6,9 @@ const initialState = {
   transferDraft: null,
 };
 
+
+
+
 const reducer_transfer = (state = { ...initialState }, action) => {
   switch (action.type) {
     case AN[`transfer__transferDefault_fetch_begin`]: {

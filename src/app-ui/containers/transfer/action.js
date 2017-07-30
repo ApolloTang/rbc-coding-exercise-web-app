@@ -3,6 +3,8 @@ import _ from 'lodash';
 import AN from 'root-infarstructure/action-names';
 import API_transfer from 'services/transfer/api';
 
+import {transferDraft_default} from 'services/domain/transfer';
+
 const Action_transfer = {
   init() {
     return (dispatch, getState) => {
@@ -26,6 +28,8 @@ const Action_transfer = {
                 error: session.httpError.message,
               });
           } else {
+            // transferFrequency devalue value is set locally
+            _.set(transferDefault, `transferFrequency`, transferDraft_default.transferFrequency);
             dispatch({
               type: AN[`transfer__transferDefault_fetch_success`],
               payload: {transferDefault},
