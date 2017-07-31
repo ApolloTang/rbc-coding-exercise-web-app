@@ -21,7 +21,7 @@ class Screen_profile extends React.Component {
   }
 
   componentDidMount() {
-    this.props.dispatch_init();
+    // this.props.dispatch_init();
     // this.props.dispatch_fetchUserById(this.props.userId);
   }
 
