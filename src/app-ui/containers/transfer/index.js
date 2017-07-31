@@ -152,10 +152,12 @@ class Screen_profile extends React.Component {
 
         <fieldset className="send-to">
           <legend>Send To</legend>
-          <div class="form-row">
-            <div className="wrap-img">
-              <div className="wrap-inner-img">
-                <img src={this.props.PS.to_photo_url} />
+          <div className="form-row">
+            <div className="wrap-outter-img">
+              <div className="wrap-img">
+                <div className="wrap-inner-img">
+                  <img src={this.props.PS.to_photo_url} />
+                </div>
               </div>
             </div>
             <div className="wrap-name">

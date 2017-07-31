@@ -7,17 +7,38 @@
   :local(.module-style) {
     $height-from: 100px;
     $height-details: 100px;
+    $height-sentTo: 100px;
     $height-foot: 40px;
 
     outline: solid red 1px;
     width: 100%;
     height: 100%;
     fieldset {
-      outline: solid blue 1px;
       width: 100%;
     }
 
     .send-to {
+      .form-row {
+        outline: solid green 1px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        $w-img: 100px;
+        $w-change: 150px;
+
+        height: 100px;;
+        .wrap-outter-img {
+          width: $w-img;
+        }
+        .wrap-name {
+          width: calc( 100% - #{$w-img} - #{$w-change} );
+        }
+        .wrap-change {
+          width: $w-change;
+        }
+      }
+
       .wrap-img {
         padding: 2px;
         width: 86px;
@@ -39,7 +60,7 @@
 
     .form-row {
       // outline: solid red 1px;
-      background: red;
+      // background: red;
       width: 100%;
       display: flex;
       justify-content: space-between;
