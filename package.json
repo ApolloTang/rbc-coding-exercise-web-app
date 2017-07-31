@@ -59,6 +59,8 @@
     "start": "node ./bin/www",
     "static:dev": "nodemon ./bin/www",
     "dev": "webpack --env.dev --watch ",
-    "predev": "rimraf public/modules"
+    "predev": "rimraf public/modules",
+    "build": "webpack --env.prod -p",
+    "prebuild": "rimraf public/modules"
   }
 }
