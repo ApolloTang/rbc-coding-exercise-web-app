@@ -11,6 +11,7 @@ import {
   object
 } from 'prop-types';
 
+import styles from './styles.scss';
 
 import selector from './selector';
 const {mapStoreToProps, mapDispatchToProps} = selector;
@@ -19,9 +20,6 @@ const {mapStoreToProps, mapDispatchToProps} = selector;
 class Screen_profile extends React.Component {
   constructor(props) {
     super(props);
-    this.state={
-      alert:'xx'
-    }
   }
 
   componentDidMount() {
@@ -29,99 +27,95 @@ class Screen_profile extends React.Component {
     this.props.dispatch_getTransferDefaultByUserId(this.props.userId);
   }
 
-  shouldComponentUpdate() {
-    return true;
-  }
-
   handle_submit = () => {
     this.props.dispatch_submitDraft();
-    // this.setState({alert:Date.now().toString()})
   }
 
   handle_transferAmount = (amount) => {
     const amount_new = numeral(amount).value();
-    console.log('handle_transferAmount:', amount, amount_new);
+    // console.log('handle_transferAmount:', amount, amount_new);
     this.props.dispatch_transferFormFieldChange('amount', amount_new);
   }
 
   handle_frequencyChanged = (e) => {
-    console.log('handle_frequencyChanged:', e.target.value);
+    // console.log('handle_frequencyChanged:', e.target.value);
     this.props.dispatch_transferFormFieldChange('transferFrequency', e.target.value);
   }
 
   render() {
     if (this.props.isLoading) {
       return(
-        <div>
+        <div className={`profile ${styles['module-style']} is-loading`}>
           <i className="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
         </div>
       )
     };
 
     return (
-      <div>
+      <div className={`profile ${styles['module-style']}`}>
         {
           (this.props.transferingState === 'inProgress') ?
-            <div>
+            <div className='message in-progress'>
               <i className="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
               <p id="transfer-alert-message" role="alert" className="alert-message">Transfering in progress</p>
             </div> : null
         } {
           (this.props.transferingState === 'success') ?
-          <div><p id="transfer-alert-message" role="alert" className="alert-message">Transfering success</p></div> : null
+            <div className='message success'>
+              <p id="transfer-alert-message" role="alert" className="alert-message">Transfering success</p>
+            </div> : null
         }
-        <fieldset>
+        <fieldset className="from">
           <legend>From</legend>
-
-            <div className="form-row">
-              <div className="label-wrap">
-                <label>
-                  Account Name:
-                </label>
-              </div>
-              <div className="text-wrap">
-                <span>
-                  {this.props.PS.account_name}
-                </span>
-              </div>
+          <div className="form-row">
+            <div className="label-wrap left-col">
+              <label>
+                Account Name:
+              </label>
             </div>
-
-            <div className="form-row">
-              <div className="label-wrap">
-                <label>
-                  Account Number:
-                </label>
-              </div>
-              <div className="text-wrap">
-                <span>
-                  {this.props.PS.account_number}
-                </span>
-              </div>
+            <div className="text-wrap last-col">
+              <span>
+                {this.props.PS.account_name}
+              </span>
             </div>
+          </div>
 
-            <div className="form-row">
-              <div className="label-wrap">
-                <label>
-                  Current Balance:
-                </label>
-              </div>
-              <div className="text-wrap">
-                <span>
-                  {this.props.PS.account_balance}
-                </span>
-              </div>
+          <div className="form-row">
+            <div className="label-wrap left-col">
+              <label>
+                Account Number:
+              </label>
             </div>
+            <div className="text-wrap last-col">
+              <span>
+                {this.props.PS.account_number}
+              </span>
+            </div>
+          </div>
+
+          <div className="form-row">
+            <div className="label-wrap left-col">
+              <label>
+                Current Balance:
+              </label>
+            </div>
+            <div className="text-wrap last-col">
+              <span>
+                {this.props.PS.account_balance}
+              </span>
+            </div>
+          </div>
         </fieldset>
 
-        <fieldset>
+        <fieldset className="transfer-details">
           <legend>Transfer details</legend>
-          <div data-fn="transfer-amount" >
-            <div className="label-wrap">
+          <div className="form-row" data-fn="transfer-amount" >
+            <div className="label-wrap left-col">
               <label id="transfer-amount_label" htmlFor="transfer-amount">
                 Amount to transfer
               </label>
             </div>
-            <div className="input-wrap">
+            <div className="input-wrap last-col">
               <ReduxInput
                 onChange={ this.handle_transferAmount }
                 type="text"
@@ -136,11 +130,11 @@ class Screen_profile extends React.Component {
             </div>
           </div>
 
-          <div data-fn="transfer-frequency" >
-            <div className="label-wrap">
+          <div className="form-row" data-fn="transfer-frequency" >
+            <div className="label-wrap left-col">
               <label htmlFor="transfer-frequency">Frequency</label>
             </div>
-            <div className="select-wrap">
+            <div className="select-wrap last-col">
               <select
                 onChange={ this.handle_frequencyChanged }
                 value={this.props.PS.transferFrequency}
@@ -153,20 +147,27 @@ class Screen_profile extends React.Component {
               </select>
             </div>
           </div>
+
         </fieldset>
 
-        <fieldset>
+        <fieldset className="send-to">
           <legend>Send To</legend>
-          {/* <div> <img src={this.props.PS.to_photo_url} /> </div> */}
-          <div>
-            <span>
-              {this.props.PS.to_name}
-            </span>
-          </div>
-          <div>
-            <span>
-              Change recipient
-            </span>
+          <div class="form-row">
+            <div className="wrap-img">
+              <div className="wrap-inner-img">
+                <img src={this.props.PS.to_photo_url} />
+              </div>
+            </div>
+            <div className="wrap-name">
+              <span>
+                {this.props.PS.to_name}
+              </span>
+            </div>
+            <div className="wrap-change">
+              <span>
+                Change recipient
+              </span>
+            </div>
           </div>
         </fieldset>
 

@@ -57,8 +57,8 @@ const AuthContent = () => (
     {/* <Route exact path="/layout-demo"            component={LayoutDemo} /> */}
     {/*  */}
 
-    <Route exact path="/profile"                component={Profile} />
-    <Route exact path="/transfer"               component={Transfer} />
+    <Route exact path="/profile"                component={Transfer} />
+    <Route exact path="/transfer"               component={Profile} />
 
     {/* <Route exact path="/profile"                component={Transfer} /> */}
     {/* <Route exact path="/transfer"               component={Profile} /> */}

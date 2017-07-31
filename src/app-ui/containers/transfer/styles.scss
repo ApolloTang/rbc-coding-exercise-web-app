@@ -1,0 +1,53 @@
+/* ++++ style-file: src/app-ui/containers/header-control/styles.scss [start] */
+
+
+#root-app.theme-a {
+  @import "~common/styles/index.scss";
+  @import "~root-app/styles/app-styles-theme-a/init-scss/index.scss";
+  :local(.module-style) {
+    $height-from: 100px;
+    $height-details: 100px;
+    $height-foot: 40px;
+
+    outline: solid red 1px;
+    width: 100%;
+    height: 100%;
+    fieldset {
+      outline: solid blue 1px;
+      width: 100%;
+    }
+
+    .send-to {
+      .wrap-img {
+        padding: 2px;
+        width: 86px;
+        height: 86px;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 1px $global-border-color solid;
+        .wrap-inner-img {
+          width: 80px;
+          height: 80px;
+          overflow: hidden;
+          border-radius: 50%;
+          img {
+            width: 80px;
+          }
+        }
+      }
+    }
+
+    .form-row {
+      // outline: solid red 1px;
+      background: red;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .left-col, .last-col {
+      width: 50%;
+    }
+  }
+}
+
+/* ++++ style-file: src/app-ui/containers/header-control/styles.scss [end] */
