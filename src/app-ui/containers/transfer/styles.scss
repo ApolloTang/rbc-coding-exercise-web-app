@@ -41,16 +41,21 @@
       @include mixin-clearfix;
       margin-bottom: 10px;
     }
+    fieldset.send-to {
+      margin-bottom: 0px;
+    }
 
     .wrap-legend {
       width: 100%;
       padding: 0px 10px;
       padding-top: 5px;
-      legend {
-        padding: 10px 0px;
+      legend, .empty-legend {
         width: 100%;
-        @include text__size_subheading;
         border-top: 1px $global-border-color solid
+      }
+      legend, {
+        padding: 10px 0px;
+        @include text__size_subheading;
       }
     }
 
@@ -66,7 +71,7 @@
         $w-img: 100px;
         $w-change: 150px;
 
-        height: 100px;;
+        height: 90px;;
         .wrap-outter-img {
           width: $w-img;
         }
@@ -104,14 +109,17 @@
       height: 30px;
     }
 
-    .send-button {
-      // @include text__size_button;
-      border-radius: 2px;
-      height: 30px;
-      background: $materialDesign-blue800;
-      color: white;
-      border-color: transparent;
-      float: right;
+    .wrap-button {
+      padding: 10px;
+      .send-button {
+        // @include text__size_button;
+        border-radius: 2px;
+        height: 30px;
+        background: $materialDesign-blue800;
+        color: white;
+        border-color: transparent;
+        float: right;
+      }
     }
   }
 }

@@ -188,7 +188,13 @@ class Screen_profile extends React.Component {
         </fieldset>
 
         <div className="foot" >
-          <button className="send-button" onClick={this.handle_submit} >send {this.props.PS.amount}</button>
+          <div className="wrap-legend">
+            <div className="empty-legend"></div>
+          </div>
+
+          <div className="wrap-button">
+            <button className="send-button" onClick={this.handle_submit} >send {this.props.PS.amount}</button>
+          </div>
         </div>
 
         {/* <pre><code>{JSON.stringify(this.props.transferDraft, null, 4)}</code></pre> */}
