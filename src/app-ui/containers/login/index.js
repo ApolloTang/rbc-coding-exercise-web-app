@@ -14,6 +14,7 @@ import selector from './selector';
 const {mapStoreToProps, mapDispatchToProps} = selector;
 
 
+import styles from './styles.scss';
 
 @connect(mapStoreToProps, mapDispatchToProps)
 class Screen_Login extends React.Component {
@@ -48,43 +49,55 @@ class Screen_Login extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="group">
-          <div className="form-row" data-fn="email" >
-            <div className="label-wrap left-col">
-              <label id="email_label" htmlFor="email">
-                email:
-              </label>
+      <div className={`login ${styles['module-style']}`} >
+
+        <fieldset>
+
+          <div className="wrap-legend">
+            <legend>Please login In</legend>
+          </div>
+
+          <div className="group">
+            <div className="form-row" data-fn="email" >
+              <div className="label-wrap left-col">
+                <label id="email_label" htmlFor="email">
+                  Email:
+                </label>
+              </div>
+              <div className="input-wrap last-col">
+                <input
+                  onChange={ ()=>{} }
+                  type="text"
+                  id="email"
+                  aria-labelledby="email_label"
+                  defaultValue={''}
+                />
+              </div>
             </div>
-            <div className="input-wrap last-col">
-              <input
-                onChange={ ()=>{} }
-                type="text"
-                id="email"
-                aria-labelledby="email_label"
-                defaultValue={''}
-              />
+
+            <div className="form-row" data-fn="password" >
+              <div className="label-wrap left-col">
+                <label id="password_label" htmlFor="password">
+                  Password:
+                </label>
+              </div>
+              <div className="input-wrap last-col">
+                <input
+                  onChange={ ()=>{} }
+                  type="password"
+                  id="password"
+                  aria-labelledby="password_label"
+                  defaultValue={''}
+                />
+              </div>
             </div>
           </div>
 
-          <div className="form-row" data-fn="password" >
-            <div className="label-wrap left-col">
-              <label id="password_label" htmlFor="password">
-                Password:
-              </label>
-            </div>
-            <div className="input-wrap last-col">
-              <input
-                onChange={ ()=>{} }
-                type="password"
-                id="password"
-                aria-labelledby="password_label"
-                defaultValue={''}
-              />
-            </div>
-          </div>
+        </fieldset>
+
+        <div className="wrap-button">
+          <button className="send-button" onClick={this.handle_login} > log in </button>
         </div>
-        <button onClick={this.handle_login} > log in </button>
         {
           (this.props.isLoading) ?
             <div className='message'>
