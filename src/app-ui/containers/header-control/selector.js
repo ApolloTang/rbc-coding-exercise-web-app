@@ -1,6 +1,6 @@
 import _ from 'lodash';
-import Action from 'app-ui/containers/profile/Action';
-import Action_login from 'app-ui/containers/login/Action';
+import Action from 'app-ui/containers/profile/action';
+import Action_login from 'app-ui/containers/login/action';
 
 import { push } from 'connected-react-router';
 
