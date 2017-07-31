@@ -12,7 +12,7 @@ import RootApp from 'root-app';
 import style from './style.scss';
 
 const Root = ()=>(
-  <div className={`root ${style['module-style']}`}>
+  <div className={`root-infarstructure ${style['module-style']}`}>
     <Provider store={store}>
       <ConnectedRouter history={history}>
         <RootApp />

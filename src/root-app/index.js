@@ -5,8 +5,6 @@ import { connect } from 'react-redux';
 
 import { push } from 'connected-react-router';
 
-// import MainLayoutTest from './main-layout-test/';
-import MainLayout from './main-layout/';
 
 import {UnAuthRoutes, AuthRoutes} from './navigations/root';
 

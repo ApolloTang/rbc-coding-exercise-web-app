@@ -22,5 +22,15 @@
 //   }
 // /* Root Container Reset [completed] */
 
+// :local(.module-style) {
+// }
+
+#root-container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+}
 
 /* ++++ style-file: main.less [end]   */

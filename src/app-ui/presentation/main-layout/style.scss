@@ -1,24 +1,31 @@
 /* ++++ style-file src/root-app/main-layout.less [start] */
 
+@import "~common/styles/index.scss";
+@import "~root-app/styles/app-styles-theme-a/init-scss/index.scss";
+
 #root-app.theme-a {
   :local(.module-style) {
-    $height-head: 100px;
-    $height-foot: 50px;
+
+    $height-head: 550px;
+
+    @include mixin-clearfix;
+
+    height: 100%;
 
     .head, .body, .foot {
       width : 100%;
-      outline: yellow 1px solid;
     }
 
     .head {
+      height: $height-head;
+      overflow: hidden;
+      outline: solid red 1px;
     }
 
     .body {
-      height: calc( 100% - #{$height-head} - #{$height-foot} );
+      height: calc( 100% - #{$height-head}  );
     }
 
-    .foot {
-    }
   }
 
 }

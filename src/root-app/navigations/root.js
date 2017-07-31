@@ -21,7 +21,6 @@ import Transfer from 'app-ui/containers/transfer/index.js';
 
 
 import MainLayout from 'app-ui/presentation/main-layout/';
-// import MainLayoutTest from '../main-layout-test/';
 
 import SimpleNavigation from 'widgets/simple-navigation';
 
@@ -69,18 +68,12 @@ const AuthContent = () => (
 
 const UnAuthRoutes = () => (
 // const AuthRoutes = () => (
-  <div>
     <MainLayout
       head={ <HeaderControl /> }
       /* head={ <SimpleNavigation navigations={navigationDirective_auth} /> } */
       body={ <AuthContent /> }
       foot={ <div>foot</div>}
     />
-    {/* <MainLayoutTest */}
-    {/*   Navigation={ <SimpleNavigation navigations={navigationDirectiveStyle} /> } */}
-    {/*   Routes={ <AuthContent /> } */}
-    {/* /> */}
-  </div>
 );
 
 
