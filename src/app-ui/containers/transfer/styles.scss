@@ -137,6 +137,16 @@
       width: 100%;
       height: 30px;
     }
+    select {
+      border-radius: 0px;
+      border-color: $global-border-color;
+      background-color: white;
+      -webkit-appearance: none;
+      padding-left: 10px;
+    }
+    input {
+      padding-left: 10px;
+    }
 
     .wrap-button {
       padding: 10px;
