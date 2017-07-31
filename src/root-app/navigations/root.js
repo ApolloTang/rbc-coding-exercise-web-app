@@ -20,7 +20,7 @@ import HeaderControl from 'app-ui/containers/header-control/index.js';
 import Transfer from 'app-ui/containers/transfer/index.js';
 
 
-import MainLayout from '../main-layout/';
+import MainLayout from 'app-ui/presentation/main-layout/';
 // import MainLayoutTest from '../main-layout-test/';
 
 import SimpleNavigation from 'widgets/simple-navigation';
