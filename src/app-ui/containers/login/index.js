@@ -20,41 +20,18 @@ import styles from './styles.scss';
 class Screen_Login extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      email: '',
-      password: '',
-    };
-
-    this.inputs = {};
-  }
-
-  handle_emailChange = (email) => {
-    this.setState({ email });
-  }
-
-  handle_passwordChange = (password) => {
-    this.setState({ password });
   }
 
   handle_login = () => {
-    // FOR DEV
-    let email = ''; //this.state.email;
-    let password = ''; //this.state.password;
-
-    email = 'test_0@test.com';
-    password = 'password';
     this.props.dispatch_createSession(email, password);
   }
 
   render() {
     return (
       <div className={`login ${styles['module-style']}`} >
-
         <fieldset>
-
           <div className="wrap-legend">
-            <legend>Please login In</legend>
+            <legend>Please log in</legend>
           </div>
 
           <div className="group">
