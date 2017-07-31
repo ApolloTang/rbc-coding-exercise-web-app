@@ -52,7 +52,6 @@ const AuthContent = () => (
 
     <Route exact path="/profile"                component={Profile} />
     <Route exact path="/transfer"               component={Transfer} />
-
     {/* <Route exact path="/profile"                component={Transfer} /> */}
     {/* <Route exact path="/transfer"               component={Profile} /> */}
     <Route                                      component={()=><div>NotFound</div>}/>

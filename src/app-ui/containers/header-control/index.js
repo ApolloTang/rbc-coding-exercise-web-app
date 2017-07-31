@@ -12,7 +12,9 @@ import {
 
 import styles from './styles.scss';
 
-import selector from 'app-ui/containers/profile/selector';
+// import selector from 'app-ui/containers/profile/selector';
+
+import selector from './selector';
 const {mapStoreToProps, mapDispatchToProps} = selector;
 
 class Screen_profile extends React.Component {
@@ -23,6 +25,12 @@ class Screen_profile extends React.Component {
   componentDidMount() {
     // this.props.dispatch_init();
     // this.props.dispatch_fetchUserById(this.props.userId);
+  }
+
+  handle_logout = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    this.props.dispatch_logout();
   }
 
   render() {
@@ -69,7 +77,7 @@ class Screen_profile extends React.Component {
             </NavLink>
           </div>
           <div className="nav-button">
-            <NavLink exact to={'/logout'} activeClassName="is-active" >
+            <a href={'#'} onClick={this.handle_logout} >
               <div className="content">
                 <div className="text" >
                   <span>Sign out</span>
@@ -78,7 +86,7 @@ class Screen_profile extends React.Component {
                   <i className="fa fa-sign-out" aria-hidden="true" ></i>
                 </div>
               </div>
-            </NavLink>
+            </a>
           </div>
         </div>
 

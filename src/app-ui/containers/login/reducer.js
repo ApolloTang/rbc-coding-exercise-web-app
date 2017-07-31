@@ -25,6 +25,13 @@ const reducer_login = (state = { ...initialState }, action) => {
       const state_next = { ...state_prev, isLoading: false, loginError: action.error };
       return state_next;
     }
+
+    case AN[`login__destroySession`]: {
+      const isLoggedIn = _.get(action, `payload.isLoggedIn`, false);
+      const state_prev = { ...state };
+      const state_next = { ...initialState };
+      return state_next;
+    }
     default: {
       return state;
     }
