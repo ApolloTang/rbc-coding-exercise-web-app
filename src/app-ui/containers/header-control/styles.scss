@@ -5,7 +5,33 @@
   @import "~common/styles/index.scss";
   @import "~root-app/styles/app-styles-theme-a/init-scss/index.scss";
   :local(.module-style) {
-    color: $test-color;
+     width:100%;
+
+    .left-group {
+      float: left;
+      outline: red;
+      width:0%;
+    }
+
+    .right-group {
+      float: right;
+      outline: red;
+      width:70%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .nav-button {
+      outline: solid green 1px;
+      .content {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    .icon img {
+      height: 20px;
+    }
+
+
   }
 }
 

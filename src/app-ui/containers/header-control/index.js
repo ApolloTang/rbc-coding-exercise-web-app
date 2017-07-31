@@ -39,7 +39,7 @@ class Screen_profile extends React.Component {
     return (
       <div className={`header-control ${styles['module-style']}`}>
         <div className="left-group">
-          <i className="fa fa-credit-card fa-2x" aria-hidden="true"></i>
+          <i className="fa fa-credit-card fa-1x" aria-hidden="true"></i>
           <span>future banking</span>
         </div>
 
@@ -51,7 +51,7 @@ class Screen_profile extends React.Component {
                   <img src={_.get(this.props, `userProps.photo_url`, '')}/>
                 </div>
                 <div className="text" >
-                  <span>Keanu Reeves</span>
+                  <span>{_.get(this.props, `userProps.name`, '')}</span>
                 </div>
               </div>
             </NavLink>
