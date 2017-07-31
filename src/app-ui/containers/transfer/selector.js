@@ -15,7 +15,7 @@ const mapStoreToProps = (store) => {
     account_balance : get_presentation_money(transferDraft, `from.account_balance`, '$0,0.00', '$0.00' ),
     to_name : _.get(transferDraft, `to.name`, '' ),
     to_photo_url : _.get(transferDraft, `to.photo_url`, '' ),
-    amount : get_presentation_money(transferDraft, `amount`, '$00.00', '$0.00' ),
+    amount : get_presentation_money(transferDraft, `amount`, '$0.00', '$0.00' ),
     transferFrequency : _.get(transferDraft, `transferFrequency`, 'every-day'),
   };
 
