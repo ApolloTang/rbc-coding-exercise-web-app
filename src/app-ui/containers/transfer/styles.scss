@@ -18,6 +18,35 @@
       width: 100%;
     }
 
+    position: relative;
+    .message {
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      background: hsla(0, 0%, 80%, .8);
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      .wrap-spinner, .alert-message {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+      i.fa {
+        font-size: 150px;
+      }
+      .alert-message {
+        padding: 10px;
+        @include text__size_headline;
+      }
+
+    }
+
     .form-row {
       display: flex;
       justify-content: space-between;
@@ -121,6 +150,7 @@
         float: right;
       }
     }
+
   }
 }
 

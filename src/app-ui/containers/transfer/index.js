@@ -56,7 +56,9 @@ class Screen_profile extends React.Component {
         {
           (this.props.transferingState === 'inProgress') ?
             <div className='message in-progress'>
-              <i className="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+              <div className='wrap-spinner'>
+                <i className="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+              </div>
               <p id="transfer-alert-message" role="alert" className="alert-message">Transfering in progress</p>
             </div> : null
         } {
