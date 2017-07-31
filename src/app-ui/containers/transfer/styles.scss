@@ -7,10 +7,7 @@
   :local(.module-style) {
     @include text__size_body;
 
-    // $height-from: 100px;
-    // $height-details: 100px;
-    // $height-sentTo: 100px;
-    // $height-foot: 40px;
+    border-top: 1px $global-border-color solid;
 
     width: 100%;
     height: 100%;
@@ -74,13 +71,18 @@
       margin-bottom: 0px;
     }
 
+    fieldset.send-to, fieldset.transfer-details {
+      legend {
+        border-top: 1px $global-border-color solid;
+      }
+    }
+
     .wrap-legend {
       width: 100%;
       padding: 0px 10px;
       padding-top: 5px;
       legend, .empty-legend {
         width: 100%;
-        border-top: 1px $global-border-color solid
       }
       legend, {
         padding: 10px 0px;
