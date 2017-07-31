@@ -6,7 +6,7 @@
 #root-app.theme-a {
   :local(.module-style) {
 
-    $height-head: 50px;
+    $height-head: 43px;
 
     @include mixin-clearfix;
 
@@ -19,7 +19,6 @@
     .head {
       height: $height-head;
       overflow: hidden;
-      outline: solid red 1px;
     }
 
     .body {

@@ -3,13 +3,14 @@
 $test-color: pink;
 
 $global-background-color:     hsla(0, 0%, 97%, 1);
-$global-text-color:           $materialDesign-lightBg-secondaryText;
-$global-text-color-secondary: $materialDesign-lightBg-secondaryText;
-$global-text-color-disabled:  $materialDesign-lightBg-disabledText;
-$global-text-color-hintText:  $materialDesign-lightBg-hintText;
+$global-text-color:           $materialDesign-blueGrey700;
+$global-border-color:         $materialDesign-blueGrey300;
+// $global-text-color-secondary: $materialDesign-lightBg-secondaryText;
+// $global-text-color-disabled:  $materialDesign-lightBg-disabledText;
+// $global-text-color-hintText:  $materialDesign-lightBg-hintText;
 
 
-$placeholder-color:           $global-text-color-hintText;
+$placeholder-color:           $global-text-color;
 
 input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
   color:  $placeholder-color;

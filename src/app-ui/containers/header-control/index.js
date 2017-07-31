@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { push } from 'connected-react-router';
-import { BrowserRouter, NavLink } from 'react-router-dom';
+import { BrowserRouter, NavLink, withRouter } from 'react-router-dom';
 
 import {
   string,
@@ -15,7 +15,6 @@ import styles from './styles.scss';
 import selector from './selector';
 const {mapStoreToProps, mapDispatchToProps} = selector;
 
-@connect(mapStoreToProps, mapDispatchToProps)
 class Screen_profile extends React.Component {
   constructor(props) {
     super(props);
@@ -35,12 +34,15 @@ class Screen_profile extends React.Component {
       )
     };
 
-    console.log('xxxxxx style: ', styles)
     return (
       <div className={`header-control ${styles['module-style']}`}>
         <div className="left-group">
-          <i className="fa fa-credit-card fa-1x" aria-hidden="true"></i>
-          <span>future banking</span>
+          <div className="icon">
+            <i className="fa fa-credit-card fa-1x" aria-hidden="true"></i>
+          </div>
+          <div className="text" >
+            <span>future banking</span>
+          </div>
         </div>
 
         <div className="right-group">
@@ -58,7 +60,12 @@ class Screen_profile extends React.Component {
           </div>
           <div className="nav-button">
             <NavLink exact to={'/transfer'} activeClassName="is-active" >
-              Transfer
+              <div className="content">
+                <div className="text" >
+                  <span>Transfer</span>
+                </div>
+              </div>
+
             </NavLink>
           </div>
           <div className="nav-button">
@@ -79,5 +86,4 @@ class Screen_profile extends React.Component {
     );
   }
 }
-
-export default Screen_profile;
+export default withRouter(connect(mapStoreToProps, mapDispatchToProps)(Screen_profile))
