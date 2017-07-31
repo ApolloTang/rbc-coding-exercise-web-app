@@ -2,8 +2,7 @@
 
 #root-app.theme-a {
   :local(.module-style) {
-    $height-total: 300px;
-    $height-head: 50px;
+    $height-head: 100px;
     $height-foot: 50px;
 
     .head, .body, .foot {

@@ -6,10 +6,17 @@
   @import "~common/styles/index.scss";
   @import "./styles/app-styles-theme-a/init-scss/index.scss";
 
-  @include mixin-clearfix;
-
   color: $global-text-color;
   font-family: $global-default-font;
+
+  @include mixin-clearfix;
+  width: 500px;
+  height: 550px;
+  background: white;
+  outline: 1px solid red;
+  margin: 0 auto;
+  margin-top:60px;
+
 }
 
 /* ++++ style-file: src/root-app/styles.scss [end] */

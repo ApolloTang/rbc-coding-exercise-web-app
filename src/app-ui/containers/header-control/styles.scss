@@ -1,0 +1,12 @@
+/* ++++ style-file: src/app-ui/containers/header-control/styles.scss [start] */
+
+
+#root-app.theme-a {
+  @import "~common/styles/index.scss";
+  @import "~root-app/styles/app-styles-theme-a/init-scss/index.scss";
+  :local(.module-style) {
+    color: $test-color;
+  }
+}
+
+/* ++++ style-file: src/app-ui/containers/header-control/styles.scss [end] */

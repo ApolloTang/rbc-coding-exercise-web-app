@@ -1,0 +1,83 @@
+import React from 'react';
+import { connect } from 'react-redux';
+import { push } from 'connected-react-router';
+import { BrowserRouter, NavLink } from 'react-router-dom';
+
+import {
+  string,
+  bool,
+  func,
+  object
+} from 'prop-types';
+
+import styles from './styles.scss';
+
+import selector from './selector';
+const {mapStoreToProps, mapDispatchToProps} = selector;
+
+@connect(mapStoreToProps, mapDispatchToProps)
+class Screen_profile extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    this.props.dispatch_init();
+    this.props.dispatch_fetchUserById(this.props.userId);
+  }
+
+  render() {
+    if (this.props.isLoading) {
+      return(
+        <div>
+          <i className="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+        </div>
+      )
+    };
+
+    console.log('xxxxxx style: ', styles)
+    return (
+      <div className={`header-control ${styles['module-style']}`}>
+        <div className="left-group">
+          <i className="fa fa-credit-card fa-2x" aria-hidden="true"></i>
+          <span>future banking</span>
+        </div>
+
+        <div className="right-group">
+          <div className="nav-button">
+            <NavLink exact to={'/profile'} activeClassName="is-active" >
+              <div className="content">
+                <div className="icon">
+                  <img src={_.get(this.props, `userProps.photo_url`, '')}/>
+                </div>
+                <div className="text" >
+                  <span>Keanu Reeves</span>
+                </div>
+              </div>
+            </NavLink>
+          </div>
+          <div className="nav-button">
+            <NavLink exact to={'/transfer'} activeClassName="is-active" >
+              Transfer
+            </NavLink>
+          </div>
+          <div className="nav-button">
+            <NavLink exact to={'/logout'} activeClassName="is-active" >
+              <div className="content">
+                <div className="text" >
+                  <span>Sign out</span>
+                </div>
+                <div className="icon">
+                  <i className="fa fa-sign-out" aria-hidden="true" ></i>
+                </div>
+              </div>
+            </NavLink>
+          </div>
+        </div>
+
+      </div>
+    );
+  }
+}
+
+export default Screen_profile;

@@ -16,6 +16,7 @@ import { Route, Switch, Link, Redirect } from 'react-router-dom';
 
 import Login from 'app-ui/containers/login/index.js';
 import Profile from 'app-ui/containers/profile/index.js';
+import HeaderControl from 'app-ui/containers/header-control/index.js';
 import Transfer from 'app-ui/containers/transfer/index.js';
 
 
@@ -56,17 +57,22 @@ const AuthContent = () => (
     {/* <Route exact path="/grid-demo"              component={GridDemo} /> */}
     {/* <Route exact path="/layout-demo"            component={LayoutDemo} /> */}
     {/*  */}
+
     <Route exact path="/profile"                component={Profile} />
     <Route exact path="/transfer"               component={Transfer} />
 
+    {/* <Route exact path="/profile"                component={Transfer} /> */}
+    {/* <Route exact path="/transfer"               component={Profile} /> */}
     <Route                                      component={()=><div>NotFound</div>}/>
   </Switch>
 );
 
-const AuthRoutes = () => (
+const UnAuthRoutes = () => (
+// const AuthRoutes = () => (
   <div>
     <MainLayout
-      head={ <SimpleNavigation navigations={navigationDirective_auth} /> }
+      head={ <HeaderControl /> }
+      /* head={ <SimpleNavigation navigations={navigationDirective_auth} /> } */
       body={ <AuthContent /> }
       foot={ <div>foot</div>}
     />
@@ -78,7 +84,8 @@ const AuthRoutes = () => (
 );
 
 
-const UnAuthRoutes = () => (
+// const UnAuthRoutes = () => (
+const AuthRoutes = () => (
   <Switch>
     {/* <Route exact path="/login"        component={Transfer} /> */}
     <Route exact path="/login"        component={()=>(<Login/>)} />
