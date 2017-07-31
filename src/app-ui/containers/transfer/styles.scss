@@ -148,6 +148,15 @@
       padding-left: 10px;
     }
 
+    .wrap-name span {
+      @include text__size_subheading;
+    }
+
+    .wrap-change {
+      display: flex;
+      justify-content: flex-end;
+    }
+
     .wrap-button {
       padding: 10px;
       .send-button {

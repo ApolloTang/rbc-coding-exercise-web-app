@@ -182,9 +182,9 @@ class Screen_profile extends React.Component {
               </span>
             </div>
             <div className="wrap-change">
-              <span>
+              <a href="#">
                 Change recipient
-              </span>
+              </a>
             </div>
           </div>
         </fieldset>
