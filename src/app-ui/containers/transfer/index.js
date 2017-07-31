@@ -45,14 +45,14 @@ class Screen_profile extends React.Component {
   render() {
     if (this.props.isLoading) {
       return(
-        <div className={`profile ${styles['module-style']} is-loading`}>
+        <div className={`transfer ${styles['module-style']} is-loading`}>
           <i className="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
         </div>
       )
     };
 
     return (
-      <div className={`profile ${styles['module-style']}`}>
+      <div className={`transfer ${styles['module-style']}`}>
         {
           (this.props.transferingState === 'inProgress') ?
             <div className='message in-progress'>

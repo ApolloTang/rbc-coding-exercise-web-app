@@ -27,7 +27,6 @@ class Screen_profile extends React.Component {
   }
 
   render() {
-    console.log('xxxx: ',  this.props)
     if (this.props.isLoading) {
       return(
         <div className={`profile ${styles['module-style']} is-loading`} >

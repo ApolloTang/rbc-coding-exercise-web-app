@@ -59,8 +59,8 @@ const AuthContent = () => (
   </Switch>
 );
 
-const UnAuthRoutes = () => (
-// const AuthRoutes = () => (
+// const UnAuthRoutes = () => (
+const AuthRoutes = () => (
     <MainLayout
       head={ <HeaderControl /> }
       /* head={ <SimpleNavigation navigations={navigationDirective_auth} /> } */
@@ -70,8 +70,8 @@ const UnAuthRoutes = () => (
 );
 
 
-// const UnAuthRoutes = () => (
-const AuthRoutes = () => (
+const UnAuthRoutes = () => (
+// const AuthRoutes = () => (
   <Switch>
     {/* <Route exact path="/login"        component={Transfer} /> */}
     <Route exact path="/login"        component={()=>(<Login/>)} />
