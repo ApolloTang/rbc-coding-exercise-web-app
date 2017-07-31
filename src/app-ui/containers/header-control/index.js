@@ -12,7 +12,7 @@ import {
 
 import styles from './styles.scss';
 
-import selector from './selector';
+import selector from 'app-ui/containers/profile/selector';
 const {mapStoreToProps, mapDispatchToProps} = selector;
 
 class Screen_profile extends React.Component {

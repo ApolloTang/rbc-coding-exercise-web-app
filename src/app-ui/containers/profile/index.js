@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import { connect } from 'react-redux';
 import { push } from 'connected-react-router';
@@ -9,6 +10,7 @@ import {
   object
 } from 'prop-types';
 
+import styles from './styles.scss';
 
 import selector from './selector';
 const {mapStoreToProps, mapDispatchToProps} = selector;
@@ -28,17 +30,23 @@ class Screen_profile extends React.Component {
     console.log('xxxx: ',  this.props)
     if (this.props.isLoading) {
       return(
-        <div>
+        <div className={`profile ${styles['module-style']} is-loading`} >
           <i className="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
         </div>
       )
     };
 
     return (
-      <div>
-        <img src={_.get(this.props, `userProps.photo_url`, '')}/>
-        <pre><code>{JSON.stringify(this.props.userProps, null, 4)}</code></pre>
-          <span>hello</span>
+      <div className={`profile ${styles['module-style']}`} >
+        {/* <pre><code>{JSON.stringify(this.props.userProps, null, 4)}</code></pre> */}
+        <div className="wrap-img">
+          <img src={_.get(this.props, `userProps.photo_url`, '')}/>
+        </div>
+        <div className="wrap-name">
+          <span>
+            {_.get(this.props, `userProps.name`, '')}
+          </span>
+        </div>
       </div>
     );
   }

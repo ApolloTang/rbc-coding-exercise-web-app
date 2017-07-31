@@ -1,0 +1,33 @@
+/* ++++ style-file: src/app-ui/containers/profile/styles.scss [start] */
+
+#root-app.theme-a {
+  @import "~common/styles/index.scss";
+  @import "~root-app/styles/app-styles-theme-a/init-scss/index.scss";
+  :local(.module-style) {
+     width:100%;
+     height: 100%;
+
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+
+     .wrap-img {
+       height: 280px;
+       overflow: hidden;
+       img {
+         width: 200px;
+       }
+     }
+
+     .wrap-name {
+       padding: 10px;
+       span {
+         @include text__size_title;
+
+       }
+     }
+  }
+}
+
+/* ++++ style-file: src/app-ui/containers/profile/styles.scss [end] */
