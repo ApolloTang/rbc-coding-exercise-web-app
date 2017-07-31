@@ -49,16 +49,9 @@ const Test = ({match}) => (
 const AuthContent = () => (
   <Switch>
     <Route exact path="/"                       component={()=>(<div>home</div>)} />
-    {/* <Route exact path="/font-test"              component={FontTest} /> */}
-    {/* <Route exact path="/typography"             component={Typography} /> */}
-    {/* <Route exact path="/tiles-demo"             component={Tiles} /> */}
-    {/* <Route exact path="/elevation-test"         component={Elevations} /> */}
-    {/* <Route exact path="/grid-demo"              component={GridDemo} /> */}
-    {/* <Route exact path="/layout-demo"            component={LayoutDemo} /> */}
-    {/*  */}
 
-    <Route exact path="/profile"                component={Transfer} />
-    <Route exact path="/transfer"               component={Profile} />
+    <Route exact path="/profile"                component={Profile} />
+    <Route exact path="/transfer"               component={Transfer} />
 
     {/* <Route exact path="/profile"                component={Transfer} /> */}
     {/* <Route exact path="/transfer"               component={Profile} /> */}
