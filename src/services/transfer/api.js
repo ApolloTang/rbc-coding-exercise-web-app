@@ -17,7 +17,7 @@ const api_transfer = {
   // },
   getDefault(userId) {
     return createHttp
-      .get(`http://localhost:3001/api/transfer`)
+      .get(`${apiUrl}/transfer`)
       .then(
         transferDefault => {
           return transferDefault;

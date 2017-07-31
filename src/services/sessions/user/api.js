@@ -24,7 +24,7 @@ const api_user = {
   // },
   getOne(userId) {
     return createHttp
-      .get(`http://localhost:3001/api/user`)
+      .get(`${apiUrl}/user`)
       .then(
         userProps => {
           store.dispatch( {

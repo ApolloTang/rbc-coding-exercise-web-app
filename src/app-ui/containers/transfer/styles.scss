@@ -71,8 +71,9 @@
       margin-bottom: 0px;
     }
 
-    fieldset.send-to, fieldset.transfer-details {
-      legend {
+    fieldset.send-to, fieldset.transfer-details, .foot {
+      legend, .empty-legend {
+        width: 100%;
         border-top: 1px $global-border-color solid;
       }
     }
