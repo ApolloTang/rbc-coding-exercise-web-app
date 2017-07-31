@@ -66,92 +66,106 @@ class Screen_profile extends React.Component {
             </div> : null
         }
         <fieldset className="from">
-          <legend>From</legend>
-          <div className="form-row">
-            <div className="label-wrap left-col">
-              <label>
-                Account Name:
-              </label>
-            </div>
-            <div className="text-wrap last-col">
-              <span>
-                {this.props.PS.account_name}
-              </span>
-            </div>
+
+          <div className="wrap-legend">
+            <legend>From</legend>
           </div>
 
-          <div className="form-row">
-            <div className="label-wrap left-col">
-              <label>
-                Account Number:
-              </label>
+          <div className="group">
+            <div className="form-row">
+              <div className="label-wrap left-col">
+                <label>
+                  Account Name:
+                </label>
+              </div>
+              <div className="text-wrap last-col">
+                <span>
+                  {this.props.PS.account_name}
+                </span>
+              </div>
             </div>
-            <div className="text-wrap last-col">
-              <span>
-                {this.props.PS.account_number}
-              </span>
+
+            <div className="form-row">
+              <div className="label-wrap left-col">
+                <label>
+                  Account Number:
+                </label>
+              </div>
+              <div className="text-wrap last-col">
+                <span>
+                  {this.props.PS.account_number}
+                </span>
+              </div>
             </div>
+
+            <div className="form-row">
+              <div className="label-wrap left-col">
+                <label>
+                  Current Balance:
+                </label>
+              </div>
+              <div className="text-wrap last-col">
+                <span>
+                  {this.props.PS.account_balance}
+                </span>
+              </div>
+            </div>
+
           </div>
 
-          <div className="form-row">
-            <div className="label-wrap left-col">
-              <label>
-                Current Balance:
-              </label>
-            </div>
-            <div className="text-wrap last-col">
-              <span>
-                {this.props.PS.account_balance}
-              </span>
-            </div>
-          </div>
         </fieldset>
 
         <fieldset className="transfer-details">
-          <legend>Transfer details</legend>
-          <div className="form-row" data-fn="transfer-amount" >
-            <div className="label-wrap left-col">
-              <label id="transfer-amount_label" htmlFor="transfer-amount">
-                Amount to transfer
-              </label>
-            </div>
-            <div className="input-wrap last-col">
-              <ReduxInput
-                onChange={ this.handle_transferAmount }
-                type="text"
-                id="transfer-amount"
-                ariaLabelledby="transfer-amount_label"
-                value={this.props.PS.amount}
-                shouldAllowInput={(v)=>{
-                  const r = /^\$?\d+(,\d{3})*\.?[0-9]?[0-9]?$/;
-                  // https://stackoverflow.com/questions/8829765/regular-expression-for-dollar-amount-in-javascript
-                  return r.test(v) || /^\s*$/.test(v);
-                }} />
-            </div>
+          <div className="wrap-legend">
+            <legend>Transfer details</legend>
           </div>
 
-          <div className="form-row" data-fn="transfer-frequency" >
-            <div className="label-wrap left-col">
-              <label htmlFor="transfer-frequency">Frequency</label>
+          <div className="group">
+            <div className="form-row" data-fn="transfer-amount" >
+              <div className="label-wrap left-col">
+                <label id="transfer-amount_label" htmlFor="transfer-amount">
+                  Amount to transfer
+                </label>
+              </div>
+              <div className="input-wrap last-col">
+                <ReduxInput
+                  onChange={ this.handle_transferAmount }
+                  type="text"
+                  id="transfer-amount"
+                  ariaLabelledby="transfer-amount_label"
+                  value={this.props.PS.amount}
+                  shouldAllowInput={(v)=>{
+                    const r = /^\$?\d+(,\d{3})*\.?[0-9]?[0-9]?$/;
+                    // https://stackoverflow.com/questions/8829765/regular-expression-for-dollar-amount-in-javascript
+                    return r.test(v) || /^\s*$/.test(v);
+                  }} />
+              </div>
             </div>
-            <div className="select-wrap last-col">
-              <select
-                onChange={ this.handle_frequencyChanged }
-                value={this.props.PS.transferFrequency}
-                id="transfer-frequency"
-                name="select" >
-                <option value="every-day">Every day</option>
-                <option value="every-week">Every week</option>
-                <option value="every-month">Every month</option>
-                <option value="every-year">Every year</option>
-              </select>
+
+            <div className="form-row" data-fn="transfer-frequency" >
+              <div className="label-wrap left-col">
+                <label htmlFor="transfer-frequency">Frequency</label>
+              </div>
+              <div className="select-wrap last-col">
+                <select
+                  onChange={ this.handle_frequencyChanged }
+                  value={this.props.PS.transferFrequency}
+                  id="transfer-frequency"
+                  name="select" >
+                  <option value="every-day">Every day</option>
+                  <option value="every-week">Every week</option>
+                  <option value="every-month">Every month</option>
+                  <option value="every-year">Every year</option>
+                </select>
+              </div>
             </div>
           </div>
-
         </fieldset>
 
         <fieldset className="send-to">
-          <legend>Send To</legend>
+          <div className="wrap-legend">
+            <legend>Send To</legend>
+          </div>
           <div className="form-row">
             <div className="wrap-outter-img">
               <div className="wrap-img">
@@ -173,9 +187,12 @@ class Screen_profile extends React.Component {
           </div>
         </fieldset>
 
+        <div className="foot" >
+          <button className="send-button" onClick={this.handle_submit} >send {this.props.PS.amount}</button>
+        </div>
+
         {/* <pre><code>{JSON.stringify(this.props.transferDraft, null, 4)}</code></pre> */}
         {/* <pre><code>{JSON.stringify(this.props.PS, null, 4)}</code></pre> */}
-        <button onClick={this.handle_submit} >send {this.props.PS.amount}</button>
       </div>
     );
   }
