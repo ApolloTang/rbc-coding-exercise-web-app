@@ -14,7 +14,7 @@ const webpackDevServer_port = 9200;
 const sourceMapType = getSourceMapType('b');
 
 const absolutePath_sourceFolder = pathResolve('src');
-const absolutePath_buildFolder = pathResolve('public/modules');
+const absolutePath_buildFolder = pathResolve('public/embeded-app');
 const absolutePath_nodeModules = pathResolve('node_modules');
 const absolutePath_fonts = pathResolve('src/commmon/styles/fonts');
 const absolutePath_contentBase = pathResolve('public');
@@ -71,12 +71,12 @@ const config_fn = env => {
         [
           {
             test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$/,
-            loader: 'file-loader?&name=../modules-imgs/[name].[ext]',
+            loader: 'file-loader?name=[name].[ext]&outputPath=imgs/',
             exclude: absolutePath_fonts
           },
           {
             test: /\.(woff|woff2|ttf|eot|svg|otf)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
-            loader: 'file-loader?&name=../modules-fonts/[name].[ext]'
+            loader: 'file-loader?name=[name].[ext]&outputPath=fonts/'
           },
           {
             test: /\.(less|css)$/,
