@@ -61,6 +61,8 @@
     "dev": "webpack --env.dev --watch ",
     "predev": "rimraf public/modules",
     "build": "webpack --env.prod -p",
-    "prebuild": "rimraf public/modules"
+    "prebuild": "rimraf public/modules",
+    "debug": "node-nightly --inspect-brk node_modules/.bin/webpack --env.debug"
+
   }
 }

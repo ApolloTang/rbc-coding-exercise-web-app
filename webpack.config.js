@@ -22,13 +22,12 @@ const absolutePath_contentBase = pathResolve('public');
 const config_fn = env => {
   const {ifProd, ifNotProd} = getIfUtils(env);
 
-  if ( env && env.dev && env.debug ) {
+  if ( env && env.debug ) {
       console.log('absolutePath_sourceFolder: ', absolutePath_sourceFolder);
       console.log('absolutePath_sourceFolder: ', absolutePath_sourceFolder);
       console.log('absolutePath_buildFolder: ' , absolutePath_buildFolder);
       console.log('absolutePath_nodeModules: ' , absolutePath_nodeModules);
       console.log('absolutePath_fonts: '       , absolutePath_fonts);
-      console.log('absolutePath_public: '      , absolutePath_public);
   }
 
   const config = {
