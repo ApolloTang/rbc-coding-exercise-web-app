@@ -1,15 +1,11 @@
-if (process && process.env && process.env.CONSOLE_LOG) {
-    console.info('log from file: src/common/fonts/font-awesome/index.js'); // eslint-disable-line no-console
-}
 
+const fonts = [
+  'fontawesome-webfont.ttf',
+];
 
-// const fonts = [
-//     'fontawesome-webfont.ttf',
-// ];
-//
-// fonts.forEach(font=>{
-//     const pathToFont = './fonts/'+font;
-//     require(`${pathToFont}`);
-// });
+fonts.forEach(font=>{
+  const pathToFont = './fonts/'+font;
+  require(`${pathToFont}`);   // this is required, otherwise fontawesome does not load
+});
 
 require('./font-awesome.css');
